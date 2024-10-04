@@ -1,0 +1,34 @@
+/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=54296:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/zvx/Documents/dev/java/WarmupLab/out/production/WarmUpLab CSCD210WarmupLab
+Please enter your shoe size (no half sizes): 13
+Please enter your birth year (yyyy): 1986
+Your shoe size is the numbers before the comma, and your age (presuming you've had your bday for 2024) is the numbers after the comma: 13,38
+
+Process finished with exit code 0
+
+
+/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=54296:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/zvx/Documents/dev/java/WarmupLab/out/production/WarmUpLab CSCD210WarmupLab
+Please enter your shoe size (no half sizes): 2
+Please enter your birth year (yyyy): 1954
+Your shoe size is the numbers before the comma, and your age (presuming you've had your bday for 2024) is the numbers after the comma: 02,70
+
+Process finished with exit code 0
+
+
+/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=54296:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/zvx/Documents/dev/java/WarmupLab/out/production/WarmUpLab CSCD210WarmupLab
+Please enter your shoe size (no half sizes): 9
+Please enter your birth year (yyyy): -1994
+Your shoe size is the numbers before the comma, and your age (presuming you've had your bday for 2024) is the numbers after the comma: 49,18
+
+Process finished with exit code 0
+
+
+/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=54296:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/zvx/Documents/dev/java/WarmupLab/out/production/WarmUpLab CSCD210WarmupLab
+Please enter your shoe size (no half sizes): 12.5
+Exception in thread "main" java.util.InputMismatchException
+	at java.base/java.util.Scanner.throwFor(Scanner.java:947)
+	at java.base/java.util.Scanner.next(Scanner.java:1602)
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2267)
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2221)
+	at WarmUpLab.main(WarmUpLab.java:8)
+
+Process finished with exit code 1
