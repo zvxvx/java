@@ -1,0 +1,47 @@
+/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=49823:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/zvx/Documents/dev/java/MathLab/CSCD210MathLab/out/production/CSCD210MathLab CSCD210MathLab
+
+Please enter the skier’s name: Greg
+Please enter the winning time of the race: 154.67
+Greg was traveling at a rate of:
+16.16 meters per second
+53.03 feet per second
+58.19 kilometers per hour
+36.16 miles per hour
+It would take 1 minutes and 39.57 seconds for Greg to ski one mile.
+It would take 5.66 seconds for Greg to ski 100 yards.
+
+Process finished with exit code 0
+
+
+
+
+/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=49838:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/zvx/Documents/dev/java/MathLab/CSCD210MathLab/out/production/CSCD210MathLab CSCD210MathLab
+
+Please enter the skier’s name: Greg
+Please enter the winning time of the race: 245.43
+Greg was traveling at a rate of:
+10.19 meters per second
+33.42 feet per second
+36.67 kilometers per hour
+22.79 miles per hour
+It would take 2 minutes and 37.99 seconds for Greg to ski one mile.
+It would take 8.98 seconds for Greg to ski 100 yards.
+
+Process finished with exit code 0
+
+
+
+
+/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=49862:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/zvx/Documents/dev/java/MathLab/CSCD210MathLab/out/production/CSCD210MathLab CSCD210MathLab
+
+Please enter the skier’s name: Greg
+Please enter the winning time of the race: 1100
+Greg was traveling at a rate of:
+2.27 meters per second
+7.46 feet per second
+8.18 kilometers per hour
+5.08 miles per hour
+It would take 11 minutes and 48.11 seconds for Greg to ski one mile.
+It would take 40.23 seconds for Greg to ski 100 yards.
+
+Process finished with exit code 0
