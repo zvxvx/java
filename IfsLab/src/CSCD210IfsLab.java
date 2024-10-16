@@ -22,23 +22,20 @@ public class CSCD210IfsLab {
         char code = input.next().toLowerCase().charAt(0);
 
         if (firstMeterReading > lastMeterReading) {
-            rawGallons = ((1_000_000_000 - firstMeterReading) + lastMeterReading);
+            rawGallons = (1_000_000_000 - firstMeterReading) + lastMeterReading;
         } else {
-            rawGallons = (lastMeterReading - firstMeterReading);
+            rawGallons = lastMeterReading - firstMeterReading;
         }
         double gallons = rawGallons / 10;
 
-        // Move agnostic meter information outside of if statements to reduce code duplication.
         System.out.println("======");
-        System.out.println("METER READINGS, USAGE, AND COST");
+        System.out.println("Customer code: " + code);
         System.out.println("Beginning meter reading: " + firstMeterReading);
         System.out.println("Ending meter reading: " + lastMeterReading);
-
+        System.out.println("Gallons of Water Used: " + gallons);
         if (code == 'r') {
             double rTotal = RES_BASE + (gallons * RES_PER_GALLON);
-            System.out.println("Location: Residential");
-            System.out.println("Gallons used: " + gallons);
-            System.out.println("Bill total for this period is: " + "$" + money.format(rTotal));
+            System.out.println("Amount Billed: " + "$" + money.format(rTotal));
         } else if (code == 'b') {
             double bTotal = BUS_BASE;
             for (double i = 0; i <= gallons; i++ ) {
@@ -48,9 +45,7 @@ public class CSCD210IfsLab {
                     bTotal += BUS_PER_GALLON_USAGE_HIGH;
                 }
             }
-            System.out.println("Location: Business");
-            System.out.println("Gallons used: " + gallons);
-            System.out.println("Bill total for this period is: " + "$" + money.format(bTotal));
+            System.out.println("Amount Billed: " + "$" + money.format(bTotal));
         } else {
             System.out.println("Invalid input.");
         }
