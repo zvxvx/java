@@ -9,12 +9,15 @@ public class CSCD210IfsLab {
     public static final double BUS_PER_GALLON_USAGE_HIGH = 0.00001;
     public static void main(String[] args) {
         double rawGallons;
-        DecimalFormat moneyFormat = new DecimalFormat ("0.00");
+        DecimalFormat money = new DecimalFormat ("0.00");
         Scanner input = new Scanner(System.in);
+
         System.out.print("Enter the beginning meter reading: ");
         int firstMeterReading = input.nextInt();
+
         System.out.print("Enter the ending meter reading: ");
         int lastMeterReading = input.nextInt();
+
         System.out.print("Enter 'r' for residential or 'b' for business: ");
         char code = input.next().toLowerCase().charAt(0);
 
@@ -25,6 +28,7 @@ public class CSCD210IfsLab {
         }
         double gallons = rawGallons / 10;
 
+        // Move agnostic meter information outside of if statements to reduce code duplication.
         System.out.println("======");
         System.out.println("METER READINGS, USAGE, AND COST");
         System.out.println("Beginning meter reading: " + firstMeterReading);
@@ -34,10 +38,10 @@ public class CSCD210IfsLab {
             double rTotal = RES_BASE + (gallons * RES_PER_GALLON);
             System.out.println("Location: Residential");
             System.out.println("Gallons used: " + gallons);
-            System.out.println("Bill total for this period is: " + "$" + moneyFormat.format(rTotal));
+            System.out.println("Bill total for this period is: " + "$" + money.format(rTotal));
         } else if (code == 'b') {
             double bTotal = BUS_BASE;
-            for (int i = 0; i <= gallons; i++ ) {
+            for (double i = 0; i <= gallons; i++ ) {
                 if (i < 1000) {
                     bTotal += BUS_PER_GALLON_USAGE_LOW;
                 } else {
@@ -46,7 +50,7 @@ public class CSCD210IfsLab {
             }
             System.out.println("Location: Business");
             System.out.println("Gallons used: " + gallons);
-            System.out.println("Bill total for this period is: " + "$" + moneyFormat.format(bTotal));
+            System.out.println("Bill total for this period is: " + "$" + money.format(bTotal));
         } else {
             System.out.println("Invalid input.");
         }
