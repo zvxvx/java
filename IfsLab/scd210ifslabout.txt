@@ -1,0 +1,93 @@
+/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=51170:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/zvx/Documents/dev/java/IfsLab/out/production/IfsLab CSCD210IfsLab
+Enter the beginning meter reading: 444400003
+Enter the ending meter reading: 444400135
+Enter 'r' for residential or 'b' for business: r
+======
+Customer code: r
+Beginning meter reading: 444400003
+Ending meter reading: 444400135
+Gallons of Water Used: 13.2
+Amount Billed: $25.00
+======
+
+Process finished with exit code 0
+
+
+
+/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=51174:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/zvx/Documents/dev/java/IfsLab/out/production/IfsLab CSCD210IfsLab
+Enter the beginning meter reading: 300432956
+Enter the ending meter reading: 350945321
+Enter 'r' for residential or 'b' for business: b
+======
+Customer code: b
+Beginning meter reading: 300432956
+Ending meter reading: 350945321
+Gallons of Water Used: 5051236.5
+Amount Billed: $1550.52
+======
+
+Process finished with exit code 0
+
+
+
+/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=51178:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/zvx/Documents/dev/java/IfsLab/out/production/IfsLab CSCD210IfsLab
+Enter the beginning meter reading: 999999996
+Enter the ending meter reading: 000000007
+Enter 'r' for residential or 'b' for business: r
+======
+Customer code: r
+Beginning meter reading: 999999996
+Ending meter reading: 7
+Gallons of Water Used: 1.1
+Amount Billed: $25.00
+======
+
+Process finished with exit code 0
+
+
+
+/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=51184:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/zvx/Documents/dev/java/IfsLab/out/production/IfsLab CSCD210IfsLab
+Enter the beginning meter reading: 697043495
+Enter the ending meter reading: 697048876
+Enter 'r' for residential or 'b' for business: b
+======
+Customer code: b
+Beginning meter reading: 697043495
+Ending meter reading: 697048876
+Gallons of Water Used: 538.1
+Amount Billed: $1500.01
+======
+
+Process finished with exit code 0
+
+
+
+/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=51193:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/zvx/Documents/dev/java/IfsLab/out/production/IfsLab CSCD210IfsLab
+Enter the beginning meter reading: 999999586
+Enter the ending meter reading: 000000564
+Enter 'r' for residential or 'b' for business: r
+======
+Customer code: r
+Beginning meter reading: 999999586
+Ending meter reading: 564
+Gallons of Water Used: 97.8
+Amount Billed: $25.03
+======
+
+Process finished with exit code 0
+
+
+
+/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=51210:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/zvx/Documents/dev/java/IfsLab/out/production/IfsLab CSCD210IfsLab
+Enter the beginning meter reading: 111111193
+Enter the ending meter reading: 111114563
+Enter 'r' for residential or 'b' for business: b
+======
+Customer code: b
+Beginning meter reading: 111111193
+Ending meter reading: 111114563
+Gallons of Water Used: 337.0
+Amount Billed: $1500.01
+======
+
+Process finished with exit code 0
