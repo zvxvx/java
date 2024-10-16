@@ -19,7 +19,7 @@ public class CSCD210IfsLab {
         char code = input.next().toLowerCase().charAt(0);
 
         if (firstMeterReading > lastMeterReading) {
-            rawGallons = ((1000000000 - firstMeterReading) + lastMeterReading );
+            rawGallons = ((1_000_000_000 - firstMeterReading) + lastMeterReading);
         } else {
             rawGallons = (lastMeterReading - firstMeterReading);
         }
