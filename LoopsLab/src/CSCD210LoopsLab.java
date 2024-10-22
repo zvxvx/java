@@ -1,14 +1,24 @@
 import java.util.Scanner;
 
 public class CSCD210LoopsLab {
+    public static boolean isPrime(int input) {
+        // Sqrt of input below reduces iterations compared to using input - 1
+        for (int i = 2; i <= Math.sqrt(input); i++) {
+            if (input % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Please enter a postiive integer to analyze: ");
+        System.out.print("Please enter a positive integer to analyze: ");
         int userNumber = input.nextInt();
         if (userNumber <= 0) {
             System.out.println("Number must be a positive integer");
         }
-        while (userNumber > 0) {
+        while (userNumber >= 1) {
             System.out.println("=====THE ALMIGHTY MENU=====");
             System.out.println("1. Enter a new number");
             System.out.println("2. Print the number of odd digits, even digits and zeros in the integer");
@@ -29,21 +39,34 @@ public class CSCD210LoopsLab {
                         byte digit = (byte) (myNumArr[i] - '0');
                         if (digit % 2 == 0 && digit != 0) {
                             even++;
-                        } else if (digit % 2 != 0) {
-                            odd++;
                         } else if (digit == 0) {
                             zero++;
+                        } else {
+                            odd++;
                         }
                     }
                     System.out.println("For the number " + userNumber);
-                    System.out.println("There are a total of: "+ odd + " odd numbers.");
-                    System.out.println("There are a total of: "+ even + " even numbers.");
-                    System.out.println("There are a total of: "+ zero + " zeros.");
+                    System.out.println("There are a total of: " + odd + " odd numbers.");
+                    System.out.println("There are a total of: " + even + " even numbers.");
+                    System.out.println("There are a total of: " + zero + " zeros.");
                     break;
                 case 3:
-                    for (int i = 2; i <= userNumber; i++){
-                       System.out.println(i);
-                }
+                    if (userNumber == 1) {
+                        System.out.println("Invalid input for this option.");
+                    } else {
+                        System.out.println("=====PRIMES <= " + userNumber + "=====");
+                        for (int i = 2; i <= userNumber; i++) {
+                            if (isPrime(i)) {
+                                System.out.print(i + " ");
+                            }
+                        }
+                        System.out.print("\n");
+                        System.out.println("===========================");
+                    }
+                    break;
+                case 4:
+                    userNumber = 0;
+                    break;
             }
         }
     }
