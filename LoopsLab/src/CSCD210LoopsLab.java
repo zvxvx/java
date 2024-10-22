@@ -9,11 +9,13 @@ public class CSCD210LoopsLab {
             System.out.println("Number must be a positive integer");
         }
         while (userNumber > 0) {
+            System.out.println("=====THE ALMIGHTY MENU=====");
             System.out.println("1. Enter a new number");
             System.out.println("2. Print the number of odd digits, even digits and zeros in the integer");
             System.out.println("3. Print the prime numbers between 2 and the integer (inclusive)");
             System.out.println("4. Quit the program");
-            System.out.println("Please enter your choice: ");
+            System.out.println("===========================");
+            System.out.print("Please enter your choice: ");
             int choice = input.nextInt();
             char[] myNumArr = Integer.toString(userNumber).toCharArray();
             switch (choice) {
@@ -22,13 +24,26 @@ public class CSCD210LoopsLab {
                     userNumber = input.nextInt();
                     break;
                 case 2:
+                    byte odd = 0, even = 0, zero = 0;
                     for (int i = 0; i < myNumArr.length; i++) {
                         byte digit = (byte) (myNumArr[i] - '0');
-                        System.out.println(digit);
+                        if (digit % 2 == 0 && digit != 0) {
+                            even++;
+                        } else if (digit % 2 != 0) {
+                            odd++;
+                        } else if (digit == 0) {
+                            zero++;
+                        }
                     }
+                    System.out.println("For the number " + userNumber);
+                    System.out.println("There are a total of: "+ odd + " odd numbers.");
+                    System.out.println("There are a total of: "+ even + " even numbers.");
+                    System.out.println("There are a total of: "+ zero + " zeros.");
                     break;
                 case 3:
-
+                    for (int i = 0; i <= userNumber; i++){
+                       System.out.println(i);
+                }
             }
         }
     }
