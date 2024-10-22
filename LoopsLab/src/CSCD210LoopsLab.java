@@ -41,7 +41,7 @@ public class CSCD210LoopsLab {
                     System.out.println("There are a total of: "+ zero + " zeros.");
                     break;
                 case 3:
-                    for (int i = 0; i <= userNumber; i++){
+                    for (int i = 2; i <= userNumber; i++){
                        System.out.println(i);
                 }
             }
