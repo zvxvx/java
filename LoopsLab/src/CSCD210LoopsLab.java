@@ -23,7 +23,7 @@ public class CSCD210LoopsLab {
                     break;
                 case 2:
                     for (int i = 0; i < myNumArr.length; i++) {
-                        short digit = (short) (myNumArr[i] - '0');
+                        byte digit = (byte) (myNumArr[i] - '0');
                         System.out.println(digit);
                     }
                     break;
