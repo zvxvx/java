@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class CSCD210LoopsLab {
+
     public static boolean isPrime(int input) {
-        // Sqrt of input below reduces iterations compared to using input - 1
         for (int i = 2; i <= Math.sqrt(input); i++) {
             if (input % i == 0) {
                 return false;
