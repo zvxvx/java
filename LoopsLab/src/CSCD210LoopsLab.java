@@ -15,10 +15,12 @@ public class CSCD210LoopsLab {
         Scanner input = new Scanner(System.in);
         System.out.print("Please enter a positive integer to analyze: ");
         int userNumber = input.nextInt();
-        if (userNumber <= 0) {
-            System.out.println("Number must be a positive integer");
+        int choice;
+        while (userNumber <= 0) {
+            System.out.print("Number must be a positive integer: ");
+            userNumber = input.nextInt();
         }
-        while (userNumber >= 1) {
+        do {
             System.out.println("=====MENU=====");
             System.out.println("1. Enter a new number");
             System.out.println("2. Print the number of odd digits, even digits and zeros in the integer");
@@ -26,7 +28,7 @@ public class CSCD210LoopsLab {
             System.out.println("4. Quit the program");
             System.out.println("==============");
             System.out.print("Please enter your choice: ");
-            int choice = input.nextInt();
+            choice = input.nextInt();
             char[] myNumArr = Integer.toString(userNumber).toCharArray();
             switch (choice) {
                 case 1:
@@ -61,13 +63,16 @@ public class CSCD210LoopsLab {
                             }
                         }
                         System.out.print("\n");
-                        System.out.println("===========================");
+                        System.out.println("========================");
                     }
                     break;
                 case 4:
-                    userNumber = 0;
+                    System.out.println("Goodbye!");
+                    break;
+                default:
+                    System.out.println("Invalid choice!");
                     break;
             }
-        }
+        } while (choice != 4);
     }
 }
