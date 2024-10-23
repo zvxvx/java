@@ -2,22 +2,14 @@ import java.util.Scanner;
 
 public class CSCD210LoopsLab {
 
-    public static boolean isPrime(int input) {
-        for (int i = 2; i <= Math.sqrt(input); i++) {
-            if (input % i == 0) {
-                return false;
-            }
-        }
-        return true;
-    }
-
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Please enter a positive integer to analyze: ");
+        System.out.print("Please enter a positive integer: ");
         int userNumber = input.nextInt();
+        char[] myNumArr = Integer.toString(userNumber).toCharArray();
         int choice;
         while (userNumber <= 0) {
-            System.out.print("Number must be a positive integer: ");
+            System.out.print("Number must be a positive integer. Try again : ");
             userNumber = input.nextInt();
         }
         do {
@@ -29,50 +21,65 @@ public class CSCD210LoopsLab {
             System.out.println("==============");
             System.out.print("Please enter your choice: ");
             choice = input.nextInt();
-            char[] myNumArr = Integer.toString(userNumber).toCharArray();
+            System.out.println("==============");
             switch (choice) {
                 case 1:
                     System.out.print("Enter a new positive integer to analyze: ");
                     userNumber = input.nextInt();
                     break;
                 case 2:
-                    byte odd = 0, even = 0, zero = 0;
-                    for (int i = 0; i < myNumArr.length; i++) {
-                        byte digit = (byte) (myNumArr[i] - '0');
-                        if (digit % 2 == 0 && digit != 0) {
-                            even++;
-                        } else if (digit == 0) {
-                            zero++;
-                        } else {
-                            odd++;
-                        }
-                    }
-                    System.out.println("For the number " + userNumber);
-                    System.out.println("There are a total of: " + odd + " odd numbers.");
-                    System.out.println("There are a total of: " + even + " even numbers.");
-                    System.out.println("There are a total of: " + zero + " zeros.");
+                    digitCounter(myNumArr, userNumber);
                     break;
                 case 3:
-                    if (userNumber == 1) {
-                        System.out.println("Invalid input for this option.");
-                    } else {
-                        System.out.println("=====PRIMES <= " + userNumber + "=====");
-                        for (int i = 2; i <= userNumber; i++) {
-                            if (isPrime(i)) {
-                                System.out.print(i + " ");
-                            }
-                        }
-                        System.out.print("\n");
-                        System.out.println("========================");
-                    }
+                    primeUpTo(userNumber);
                     break;
                 case 4:
                     System.out.println("Goodbye!");
                     break;
                 default:
                     System.out.println("Invalid choice!");
-                    break;
             }
         } while (choice != 4);
+    }
+
+    public static boolean isPrime(int input) {
+        for (int i = 2; i <= Math.sqrt(input); i++) {
+            if (input % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void primeUpTo(int num) {
+        if (num == 1) {
+            System.out.println("1 isn't going to work for this option. Try a bigger number.");
+        } else {
+            System.out.println("PRIMES <= " + num);
+            for (int i = 2; i <= num; i++) {
+                if (isPrime(i)) {
+                    System.out.print(i + " ");
+                }
+            }
+            System.out.print("\n");
+        }
+    }
+
+    public static void digitCounter(char[] arr, int num) {
+        byte odd = 0, even = 0, zero = 0;
+        for (int i = 0; i < arr.length; i++) {
+            byte digit = (byte) (arr[i] - '0');
+            if (digit % 2 == 0 && digit != 0) {
+                even++;
+            } else if (digit == 0) {
+                zero++;
+            } else {
+                odd++;
+            }
+        }
+        System.out.println("For the number " + num + ":");
+        System.out.println("There are a total of: " + odd + " odd numbers.");
+        System.out.println("There are a total of: " + even + " even numbers.");
+        System.out.println("There are a total of: " + zero + " zeros.");
     }
 }
