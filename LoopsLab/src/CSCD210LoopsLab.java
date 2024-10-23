@@ -19,12 +19,12 @@ public class CSCD210LoopsLab {
             System.out.println("Number must be a positive integer");
         }
         while (userNumber >= 1) {
-            System.out.println("=====THE ALMIGHTY MENU=====");
+            System.out.println("=====MENU=====");
             System.out.println("1. Enter a new number");
             System.out.println("2. Print the number of odd digits, even digits and zeros in the integer");
             System.out.println("3. Print the prime numbers between 2 and the integer (inclusive)");
             System.out.println("4. Quit the program");
-            System.out.println("===========================");
+            System.out.println("==============");
             System.out.print("Please enter your choice: ");
             int choice = input.nextInt();
             char[] myNumArr = Integer.toString(userNumber).toCharArray();
