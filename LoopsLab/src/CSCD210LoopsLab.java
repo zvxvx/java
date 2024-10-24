@@ -6,13 +6,15 @@ public class CSCD210LoopsLab {
         Scanner input = new Scanner(System.in);
         System.out.print("Please enter a positive integer: ");
         int userNumber = input.nextInt();
-        char[] myNumArr = Integer.toString(userNumber).toCharArray();
         int choice;
         while (userNumber <= 0) {
-            System.out.print("Number must be a positive integer. Try again : ");
+            System.out.println("Number must be a positive integer.");
+            System.out.print("Try again: ");
             userNumber = input.nextInt();
         }
         do {
+            System.out.println("\n");
+            System.out.println("Current #: " + userNumber);
             System.out.println("=====MENU=====");
             System.out.println("1. Enter a new number");
             System.out.println("2. Print the number of odd digits, even digits and zeros in the integer");
@@ -22,12 +24,15 @@ public class CSCD210LoopsLab {
             System.out.print("Please enter your choice: ");
             choice = input.nextInt();
             System.out.println("==============");
+            System.out.println("\n");
             switch (choice) {
                 case 1:
-                    System.out.print("Enter a new positive integer to analyze: ");
+                    System.out.print("Enter a new positive integer: ");
                     userNumber = input.nextInt();
+                    System.out.println("The number has been changed to: " + userNumber);
                     break;
                 case 2:
+                    char[] myNumArr = Integer.toString(userNumber).toCharArray();
                     digitCounter(myNumArr, userNumber);
                     break;
                 case 3:
@@ -37,7 +42,7 @@ public class CSCD210LoopsLab {
                     System.out.println("Goodbye!");
                     break;
                 default:
-                    System.out.println("Invalid choice!");
+                    System.out.println("Choice must be 1, 2, 3, or 4.");
             }
         } while (choice != 4);
     }
@@ -77,9 +82,10 @@ public class CSCD210LoopsLab {
                 odd++;
             }
         }
+        String printOut = "There are a total of: ";
         System.out.println("For the number " + num + ":");
-        System.out.println("There are a total of: " + odd + " odd numbers.");
-        System.out.println("There are a total of: " + even + " even numbers.");
-        System.out.println("There are a total of: " + zero + " zeros.");
+        System.out.println(printOut + odd + " odd numbers.");
+        System.out.println(printOut + even + " even numbers.");
+        System.out.println(printOut + zero + " zeros.");
     }
 }
