@@ -3,34 +3,44 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class CSCD210APILab {
+
     public static final int YEAR = 2024;
+
     public static void main(String[] args) {
         Scanner kb = new Scanner(System.in);
-        char ltr;
-        String name;
-        int birthYear;
+        char ltr, upperLtr;
+        String name, character, middleLast, middle;
+        int birthYear, last;
 
         System.out.print("Please enter a single alphabetical character: ");
-        ltr = kb.next().toLowerCase().charAt(0);
+        character = kb.next();
+        ltr = character.toLowerCase().charAt(0);
+        upperLtr = character.toUpperCase().charAt(0);
 
         System.out.print("Please enter your full name: ");
         name = kb.next();
-        String middleLast = kb.nextLine().strip();
-        char[] middleLastArr = middleLast.toCharArray();
-
+        middleLast = kb.nextLine();
         System.out.print("Please enter your birth year: ");
         birthYear = kb.nextInt();
 
-        char[] middle = new char[middleLast.indexOf(' ')];
+        char[] fullName = (name + middleLast).toCharArray();
+        char[] fullNameQuestion = new char[fullName.length];
 
-        for (byte i = 0; i < middleLast.indexOf(' '); i++) {
-            middle[i] = middleLastArr[i];
-        }
-        String last = middleLast.substring(middle.length).strip(); //try substring
+        middle = middleLast.substring(middleLast.indexOf(' '), middleLast.lastIndexOf(' ')).stripLeading();
+        last = middleLast.substring(middleLast.lastIndexOf(' ') + 1).hashCode(); //try substring
 
-        System.out.println(last);
         System.out.println("The first letter of your name is: " + name.charAt(0));
         System.out.println("The last letter of your name is: " + middleLast.charAt(middleLast.length() - 1));
         System.out.println(middle);
+        System.out.println(last + YEAR + birthYear);
+
+        for (int i = 0; i < fullName.length; i++) {
+            if (fullName[i] == ltr || fullName[i] == upperLtr) {
+                fullNameQuestion[i] = '?';
+            } else {
+                fullNameQuestion[i] = fullName[i];
+            }
+        }
+        System.out.println(fullNameQuestion);
     }
 }
