@@ -5,12 +5,12 @@ public class CSCD210DebuggerMiniLab {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        char[] singleChar = {'h', 'f'};
+        String[] strArray = {"hello", "friend"};
 
         String word = "word";
 
-        char nothing = input.next().charAt(0);
-        if (nothing == singleChar[0]) {
+        String nothing = input.next();
+        if (nothing.equals(strArray[0])) {
             System.out.println("Hello");
         }
 
