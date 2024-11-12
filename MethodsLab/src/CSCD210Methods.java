@@ -68,6 +68,7 @@ public class CSCD210Methods {
         for (int i = numArray.length - 1; i >= 0; i--) {
             System.out.print(numArray[i]);
         }
+        System.out.print("\n");
     }
 
     public static void oddEvenZero(int theNum) {
@@ -85,6 +86,6 @@ public class CSCD210Methods {
                 odd++;
             }
         }
-        System.out.print("The number " + theNum + " contains " + odd + " odd number(s) " + even + " even number(s) and " + zero + " zero(s).");
+        System.out.println("The number " + theNum + " contains " + odd + " odd number(s) " + even + " even number(s) and " + zero + " zero(s).");
     }
 }
