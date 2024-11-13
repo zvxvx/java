@@ -1,4 +1,3 @@
-import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class CSCD210Methods {
@@ -60,7 +59,7 @@ public class CSCD210Methods {
         if (theNum < 1) {
             throw new IllegalArgumentException("Input must be a positive number.");
         }
-        System.out.println(BigDecimal.valueOf(Math.exp(theNum)));
+        System.out.println(Math.pow(1 + (double) 1 / theNum, theNum));
     }
 
     public static void printReverse(int theNum) {
