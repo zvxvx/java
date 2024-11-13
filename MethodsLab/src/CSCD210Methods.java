@@ -6,8 +6,8 @@ public class CSCD210Methods {
         int sum = 0;
         int numLength = Integer.toString(input).length();
         int[] numArr = Integer.toString(input).chars().map(c -> c - '0').toArray();
-        for (int i = 0; i < numArr.length; i++) {
-            sum += numArr[i];
+        for (int i : numArr) {
+            sum += i;
         }
         return (double) sum / numLength;
     }
@@ -63,6 +63,9 @@ public class CSCD210Methods {
     }
 
     public static void printReverse(int theNum) {
+        if (theNum < 1) {
+            throw new IllegalArgumentException("Input must be a positive number.");
+        }
         int[] numArray = Integer.toString(theNum).chars().map(c -> c - '0').toArray();
         for (int i = numArray.length - 1; i >= 0; i--) {
             System.out.print(numArray[i]);
@@ -76,10 +79,10 @@ public class CSCD210Methods {
         }
         byte odd = 0, even = 0, zero = 0;
         int[] numArray = Integer.toString(theNum).chars().map(c -> c - '0').toArray();
-        for (int i = 0; i < numArray.length; i++) {
-            if (numArray[i] == 0) {
+        for (int i : numArray) {
+            if (i == 0) {
                 zero++;
-            } else if (numArray[i] % 2 == 0) {
+            } else if (i % 2 == 0) {
                 even++;
             } else {
                 odd++;
