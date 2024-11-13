@@ -1,5 +1,7 @@
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import cscd210methods.CSCD210Methods;
 import org.junit.jupiter.api.Test;
 import java.lang.reflect.Method;
 import java.util.Scanner;

@@ -1,3 +1,5 @@
+package cscd210methods;
+
 import java.util.Scanner;
 
 public class CSCD210Methods {
