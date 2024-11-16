@@ -1,9 +1,17 @@
 package cscd210methods;
-
 import java.util.Scanner;
 
+/**
+ * This class provides several methods to do tasks.
+ */
 public class CSCD210Methods {
 
+    /**
+     * This is a private method used for the lightOrHeavy method to reduce the
+     * duplication of code. It is not for outside use.
+     * @param input this input is based on user input from lightOrHeavy.
+     * @return returns the average of a number in double form.
+     */
     private static double findAvgOfDigits(int input) {
         int sum = 0;
         int numLength = Integer.toString(input).length();
@@ -23,7 +31,7 @@ public class CSCD210Methods {
         int inputNum = kb.nextInt();
         double secondAvgDigits = findAvgOfDigits(inputNum);
         String lightOrHeavy = avgDigits > secondAvgDigits ? "Heavy" : "Light";
-        System.out.println("The number is: " + lightOrHeavy);
+        System.out.println("The initial number is: " + lightOrHeavy);
     }
 
     public static int readPosNum(Scanner kb) {
@@ -61,7 +69,7 @@ public class CSCD210Methods {
         if (theNum < 1) {
             throw new IllegalArgumentException("Input must be a positive number.");
         }
-        System.out.println(Math.pow(1 + (double) 1 / theNum, theNum));
+        System.out.println("The e of number " + theNum + " is: " + Math.pow(1 + (double) 1 / theNum, theNum));
     }
 
     public static void printReverse(int theNum) {
@@ -69,6 +77,7 @@ public class CSCD210Methods {
             throw new IllegalArgumentException("Input must be a positive number.");
         }
         int[] numArray = Integer.toString(theNum).chars().map(c -> c - '0').toArray();
+        System.out.println("Reversing the number " + theNum);
         for (int i = numArray.length - 1; i >= 0; i--) {
             System.out.print(numArray[i]);
         }

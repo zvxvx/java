@@ -1,0 +1,70 @@
+/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=49958:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/zvx/Documents/dev/java/MethodsLab/out/production/MethodsLab:/Users/zvx/.m2/repository/org/junit/jupiter/junit-jupiter/5.8.1/junit-jupiter-5.8.1.jar:/Users/zvx/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.1/junit-jupiter-api-5.8.1.jar:/Users/zvx/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/zvx/.m2/repository/org/junit/platform/junit-platform-commons/1.8.1/junit-platform-commons-1.8.1.jar:/Users/zvx/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/zvx/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.8.1/junit-jupiter-params-5.8.1.jar:/Users/zvx/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.1/junit-jupiter-engine-5.8.1.jar:/Users/zvx/.m2/repository/org/junit/platform/junit-platform-engine/1.8.1/junit-platform-engine-1.8.1.jar cscd210methodsmain.CSCD210MethodsMain
+
+Please enter a positive number: 6935
+Menu Choices are: 
+1) Enter a new number
+2) Print the number of even/odd/zeros
+3) Print if the number is light or heavy
+4) Print the value of E
+5) Print the number in reverse order
+6) Quit
+Please enter your choice: 2
+The number 6935 contains 3 odd number(s) 1 even number(s) and 0 zero(s).
+Menu Choices are: 
+1) Enter a new number
+2) Print the number of even/odd/zeros
+3) Print if the number is light or heavy
+4) Print the value of E
+5) Print the number in reverse order
+6) Quit
+Please enter your choice: 3
+Please input a second number: 2345
+The initial number is: Heavy
+Menu Choices are: 
+1) Enter a new number
+2) Print the number of even/odd/zeros
+3) Print if the number is light or heavy
+4) Print the value of E
+5) Print the number in reverse order
+6) Quit
+Please enter your choice: 4
+The e of number 6935 is: 2.718085871530265
+Menu Choices are: 
+1) Enter a new number
+2) Print the number of even/odd/zeros
+3) Print if the number is light or heavy
+4) Print the value of E
+5) Print the number in reverse order
+6) Quit
+Please enter your choice: 5
+Reversing the number 6935
+5396
+Menu Choices are: 
+1) Enter a new number
+2) Print the number of even/odd/zeros
+3) Print if the number is light or heavy
+4) Print the value of E
+5) Print the number in reverse order
+6) Quit
+Please enter your choice: 1
+Please enter a positive number: 546
+Menu Choices are: 
+1) Enter a new number
+2) Print the number of even/odd/zeros
+3) Print if the number is light or heavy
+4) Print the value of E
+5) Print the number in reverse order
+6) Quit
+Please enter your choice: 5
+Reversing the number 546
+645
+Menu Choices are: 
+1) Enter a new number
+2) Print the number of even/odd/zeros
+3) Print if the number is light or heavy
+4) Print the value of E
+5) Print the number in reverse order
+6) Quit
+Please enter your choice: 6
+
+Process finished with exit code 0
