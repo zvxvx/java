@@ -89,15 +89,15 @@ public class ArrayUtils {
             throw new IllegalArgumentException("bad params deleteSingleValue");
 
         System.out.print("Please enter the value you wish to delete from the array: ");
-        int toDelete = kb.nextInt();
-        int indexOfTargetToDelete = 0;
+        int target = kb.nextInt();
+        int targetIndex = 0;
         boolean targetFound = false;
         int[] copy = null;
 
         for (int i = 0; i < myArray.length; i++) {
-            if (myArray[i] == toDelete) {
+            if (myArray[i] == target) {
                 targetFound = true;
-                indexOfTargetToDelete = i;
+                targetIndex = i;
                 copy = new int[myArray.length - 1];
                 break;
             }
@@ -107,14 +107,16 @@ public class ArrayUtils {
             return myArray;
         } else {
             for (int i = 0; i < copy.length; i++) {
-                if (myArray[i] == toDelete) {
+                if (myArray[i] == target) {
                     break;
                 } else {
                     copy[i] = myArray[i];
                 }
             }
-            for (int i = indexOfTargetToDelete; i < copy.length; i++) {
-                copy[i] = myArray[i + 1];
+            if (copy[targetIndex] == 0) {
+                for (int i = targetIndex; i < copy.length; i++) {
+                    copy[i] = myArray[i + 1];
+                }
             }
         }
         return copy;

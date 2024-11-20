@@ -1,10 +1,7 @@
 Beginning of Tests
-testComputeMedian_EvenLength() : FAILED
-Reason: Index 4 out of bounds for length 4
-End of Tests
-Passed: 0
-Failed: 1
-PASSED
+testCreateAndFillArray_ValidInput() : PASSED
+testAddNum_ValidInput() : PASSED
+testDeleteSingleValue_ValueExists() : PASSED
 testDeleteSingleValue_ValueNotFound() : PASSED
 testPrintArray_ValidArray() : PASSED
 testComputeMean_ValidInput() : PASSED
