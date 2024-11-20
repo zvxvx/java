@@ -120,7 +120,8 @@ public class IntStatisticsUtils {
     /**
      * The standard deviation shows how much variation from the average exists.<br>
      * 1.	Compute the mean of the array.<br>
-     * 2.	Create a new array of deviations by subtracting the mean from each member from the original array.<br>
+     * 2.	Create a new array of deviations by subtracting the mean from each member from
+     * the original array.<br>
      * 3.	Square each member of the deviations array.<br>
      * 4.	Total those squared deviations.<br>
      * 5.	Divide by one less than the original array length.<br>
@@ -135,7 +136,15 @@ public class IntStatisticsUtils {
      * @throws IllegalArgumentException if the length of myArray is less than zero
      */
     public static double computeStdDev(int[] myArray) {
-        return 1;
+        double meanValue = computeMean(myArray);
+        double[] devArr = new double[myArray.length];
+        double sum = 0;
+        for (int i = 0; i < devArr.length; i++) {
+            devArr[i] = myArray[i] - meanValue;
+            devArr[i] = Math.sqrt(devArr[i]);
+            sum += devArr[i];
+        }
+        return Math.sqrt(sum / myArray.length - 1);
     }
 
 }// end class
