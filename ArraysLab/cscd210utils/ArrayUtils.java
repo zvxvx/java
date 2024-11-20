@@ -132,7 +132,7 @@ public class ArrayUtils {
      */
     public static void printArray(int[] myArray) {
         if (myArray == null || myArray.length < 1)
-            throw new IllegalArgumentException("bad params deleteSingleValue");
+            throw new IllegalArgumentException("bad params printArray");
 
         System.out.print("[");
         for (int i = 0; i < myArray.length; i++) {

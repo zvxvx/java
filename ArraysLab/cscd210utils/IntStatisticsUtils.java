@@ -148,5 +148,4 @@ public class IntStatisticsUtils {
         }
         return Math.sqrt(sum / (myArray.length - 1));
     }
-
 }// end class
