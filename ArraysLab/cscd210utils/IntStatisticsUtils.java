@@ -81,14 +81,14 @@ public class IntStatisticsUtils {
         if (myArray == null || myArray.length < 1) {
             throw new IllegalArgumentException("bad params computeMedian");
         }
-        int elementFound, elementFoundTwo;
+        int indexFound, indexFoundTwo;
         SortUtils.selectionSort(myArray);
         if (myArray.length % 2 != 0) {
             return myArray[myArray.length / 2];
         } else {
-            elementFound = myArray[myArray.length / 2];
-            elementFoundTwo = myArray[elementFound - 1];
-            return (double) (elementFound + elementFoundTwo) / 2;
+            indexFound = myArray.length / 2;
+            indexFoundTwo = indexFound - 1;
+            return (double) (myArray[indexFound] + myArray[indexFoundTwo]) / 2;
         }
     }
 

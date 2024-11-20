@@ -6,10 +6,9 @@ testDeleteSingleValue_ValueNotFound() : PASSED
 testPrintArray_ValidArray() : PASSED
 testComputeMean_ValidInput() : PASSED
 testComputeMedian_OddLength() : PASSED
-testComputeMedian_EvenLength() : FAILED
-Reason: Index 4 out of bounds for length 4
+testComputeMedian_EvenLength() : PASSED
 testComputeStdDev_ValidInput() : PASSED
 testComputeMidpoint_ValidInput() : PASSED
 End of Tests
-Passed: 9
-Failed: 1
+Passed: 10
+Failed: 0
