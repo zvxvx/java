@@ -141,10 +141,9 @@ public class IntStatisticsUtils {
         double sum = 0;
         for (int i = 0; i < devArr.length; i++) {
             devArr[i] = myArray[i] - meanValue;
-            devArr[i] = Math.sqrt(devArr[i]);
-            sum += devArr[i];
+            sum += devArr[i] * devArr[i];
         }
-        return Math.sqrt(sum / myArray.length - 1);
+        return Math.sqrt(sum / (myArray.length - 1));
     }
 
 }// end class
