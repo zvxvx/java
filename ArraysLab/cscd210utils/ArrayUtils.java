@@ -26,10 +26,9 @@ public class ArrayUtils {
 
         int[] array = new int[num];
 
-        System.out.print("Please enter a number to fill your array with: ");
-        int numberFill = kb.nextInt();
-
         for (int i = 0; i < array.length; i++) {
+            System.out.print("Please enter a number to fill your array with: ");
+            int numberFill = kb.nextInt();
             array[i] = numberFill;
         }
         return array;

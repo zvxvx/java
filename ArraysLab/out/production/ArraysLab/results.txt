@@ -1,0 +1,16 @@
+Beginning of Tests
+testCreateAndFillArray_ValidInput() : FAILED
+Reason: array contents differ at index [1], expected: <20> but was: <10>
+testAddNum_ValidInput() : PASSED
+testDeleteSingleValue_ValueExists() : PASSED
+testDeleteSingleValue_ValueNotFound() : PASSED
+testPrintArray_ValidArray() : PASSED
+testComputeMean_ValidInput() : PASSED
+testComputeMedian_OddLength() : PASSED
+testComputeMedian_EvenLength() : FAILED
+Reason: Index 4 out of bounds for length 4
+testComputeStdDev_ValidInput() : PASSED
+testComputeMidpoint_ValidInput() : PASSED
+End of Tests
+Passed: 8
+Failed: 2
