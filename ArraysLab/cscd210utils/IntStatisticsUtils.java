@@ -136,6 +136,9 @@ public class IntStatisticsUtils {
      * @throws IllegalArgumentException if the length of myArray is less than zero
      */
     public static double computeStdDev(int[] myArray) {
+        if (myArray == null || myArray.length < 1) {
+            throw new IllegalArgumentException("bad params computeStdDev");
+        }
         double meanValue = computeMean(myArray);
         double[] devArr = new double[myArray.length];
         double sum = 0;
