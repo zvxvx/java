@@ -6,7 +6,7 @@ import java.util.Scanner;
  * The ArrayUtils class performs basic array functions, such as adding an item to the array
  * removing items from the array, printing the arrays.<br>
  * All parameters will be passed as final. <br>
- * All pre and post conditions will be enforced
+ * All pre- and post- conditions will be enforced
  */
 @SuppressWarnings({"ExplicitArrayFilling", "UnnecessaryLocalVariable", "ManualArrayCopy", "ConstantValue"})
 public class ArrayUtils {
@@ -39,7 +39,7 @@ public class ArrayUtils {
      * The addNum method makes a new array that is one more in length the old array which is passed in.
      * The method then copies the values from the old array (index by index) and places the values in
      * the new array.
-     * Finally the user is prompted to enter a value and that value is placed within the new array in
+     * Finally, the user is prompted to enter a value and that value is placed within the new array in
      * the last index.
      *
      * @param myArray Representing the old array of integers that will be copied.
@@ -107,21 +107,15 @@ public class ArrayUtils {
             System.out.println("Value not found!");
             return myArray;
         } else {
-            if (myArray[0] == toDelete) {
-                for (int i = 0; i < copy.length; i++) {
-                    copy[i] = myArray[i + 1];
+            for (int i = 0; i < copy.length; i++) {
+                if (myArray[i] == toDelete) {
+                    break;
+                } else {
+                    copy[i] = myArray[i];
                 }
-            } else {
-                for (int i = 0; i < copy.length; i++) {
-                    if (myArray[i] == toDelete) {
-                        break;
-                    } else {
-                        copy[i] = myArray[i];
-                    }
-                }
-                for (int i = indexOfTargetToDelete; i < copy.length; i++) {
-                    copy[i] = myArray[i + 1];
-                }
+            }
+            for (int i = indexOfTargetToDelete; i < copy.length; i++) {
+                copy[i] = myArray[i + 1];
             }
         }
         return copy;
