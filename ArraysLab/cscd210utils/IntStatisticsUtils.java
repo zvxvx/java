@@ -19,7 +19,7 @@ public class IntStatisticsUtils {
      * @param myArray Representing the array of integers
      * @return double Representing the mean of the integers in the array
      * @throws IllegalArgumentException if myArray is null
-     * @throws IllegalArgumentException if the length of myArray is less than zero
+     * @throws IllegalArgumentException if the length of myArray is less than one
      * @NOTE Integer arithmetic happens so ensure you cast so double arithmetic happens
      * <br>
      */
@@ -133,7 +133,7 @@ public class IntStatisticsUtils {
      * @param myArray Representing the array of integers
      * @return double Representing the mean of the integers in the array
      * @throws IllegalArgumentException if myArray is null
-     * @throws IllegalArgumentException if the length of myArray is less than zero
+     * @throws IllegalArgumentException if the length of myArray is less than one
      */
     public static double computeStdDev(int[] myArray) {
         if (myArray == null || myArray.length < 1) {

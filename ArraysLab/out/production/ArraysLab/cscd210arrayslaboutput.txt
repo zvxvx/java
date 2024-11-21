@@ -1,0 +1,390 @@
+// first pass
+
+/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=52632:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/zvx/Documents/dev/java/ArraysLab/out/production/ArraysLab:/Users/zvx/.m2/repository/org/junit/jupiter/junit-jupiter/5.8.1/junit-jupiter-5.8.1.jar:/Users/zvx/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.1/junit-jupiter-api-5.8.1.jar:/Users/zvx/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/zvx/.m2/repository/org/junit/platform/junit-platform-commons/1.8.1/junit-platform-commons-1.8.1.jar:/Users/zvx/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/zvx/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.8.1/junit-jupiter-params-5.8.1.jar:/Users/zvx/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.1/junit-jupiter-engine-5.8.1.jar:/Users/zvx/.m2/repository/org/junit/platform/junit-platform-engine/1.8.1/junit-platform-engine-1.8.1.jar cscd210arrayslab.CSCD210ArraysLab
+
+Please enter an integer greater than 0 5
+Please enter a number to fill your array with: 1
+Please enter a number to fill your array with: 2
+Please enter a number to fill your array with: 3
+Please enter a number to fill your array with: 4
+Please enter a number to fill your array with: 5
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 3
+[1, 2, 3, 4, 5]
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 4
+The Mean is: 3.0
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 5
+The median is: 3.0
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 6
+The Midpoint is: 3.0
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 7
+The Standard Deviation is: 1.5811388300841898
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 1
+Please enter the number you wish to add to the array: 6
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 3
+[1, 2, 3, 4, 5, 6]
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 2
+Please enter the value you wish to delete from the array: 4
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 3
+[1, 2, 3, 5, 6]
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 8
+All Done
+Good Bye
+
+Process finished with exit code 0
+
+// second pass
+
+/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=52646:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/zvx/Documents/dev/java/ArraysLab/out/production/ArraysLab:/Users/zvx/.m2/repository/org/junit/jupiter/junit-jupiter/5.8.1/junit-jupiter-5.8.1.jar:/Users/zvx/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.1/junit-jupiter-api-5.8.1.jar:/Users/zvx/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/zvx/.m2/repository/org/junit/platform/junit-platform-commons/1.8.1/junit-platform-commons-1.8.1.jar:/Users/zvx/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/zvx/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.8.1/junit-jupiter-params-5.8.1.jar:/Users/zvx/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.1/junit-jupiter-engine-5.8.1.jar:/Users/zvx/.m2/repository/org/junit/platform/junit-platform-engine/1.8.1/junit-platform-engine-1.8.1.jar cscd210arrayslab.CSCD210ArraysLab
+Please enter an integer greater than 0 6
+Please enter a number to fill your array with: 9
+Please enter a number to fill your array with: 5
+Please enter a number to fill your array with: 7
+Please enter a number to fill your array with: 7
+Please enter a number to fill your array with: 4
+Please enter a number to fill your array with: 3
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 3
+[9, 5, 7, 7, 4, 3]
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 2
+Please enter the value you wish to delete from the array: 7
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 3
+[9, 5, 7, 4, 3]
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 1
+Please enter the number you wish to add to the array: 8
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 3
+[9, 5, 7, 4, 3, 8]
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 4
+The Mean is: 6.0
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 5
+The median is: 6.0
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 6
+The Midpoint is: 6.0
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 3
+[3, 4, 5, 7, 8, 9]
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 7
+The Standard Deviation is: 2.3664319132398464
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 8
+All Done
+Good Bye
+
+Process finished with exit code 0
+
+// third pass
+
+/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=52684:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/zvx/Documents/dev/java/ArraysLab/out/production/ArraysLab:/Users/zvx/.m2/repository/org/junit/jupiter/junit-jupiter/5.8.1/junit-jupiter-5.8.1.jar:/Users/zvx/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.1/junit-jupiter-api-5.8.1.jar:/Users/zvx/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/zvx/.m2/repository/org/junit/platform/junit-platform-commons/1.8.1/junit-platform-commons-1.8.1.jar:/Users/zvx/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/zvx/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.8.1/junit-jupiter-params-5.8.1.jar:/Users/zvx/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.1/junit-jupiter-engine-5.8.1.jar:/Users/zvx/.m2/repository/org/junit/platform/junit-platform-engine/1.8.1/junit-platform-engine-1.8.1.jar cscd210arrayslab.CSCD210ArraysLab
+
+Please enter an integer greater than 0 4
+Please enter a number to fill your array with: 1
+Please enter a number to fill your array with: 1
+Please enter a number to fill your array with: 2
+Please enter a number to fill your array with: 2
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 3
+[1, 1, 2, 2]
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 2
+Please enter the value you wish to delete from the array: 1
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 3
+[1, 2, 2]
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 2
+Please enter the value you wish to delete from the array: 2
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 3
+[1, 2]
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 1
+Please enter the number you wish to add to the array: 7
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 1
+Please enter the number you wish to add to the array: 9
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 1
+Please enter the number you wish to add to the array: 109
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 3
+[1, 2, 7, 9, 109]
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 5
+The median is: 7.0
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 4
+The Mean is: 25.6
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 6
+The Midpoint is: 55.0
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 7
+The Standard Deviation is: 46.74184420837501
+1) Add a value to the array
+2) Delete a value from the array (by value)
+3) Display the array
+4) Compute the mean of the array
+5) Compute the median of the array
+6) Compute the midpoint of the array
+7) Compute the standard deviation of the array
+8) Quit
+Choice --> 8
+All Done
+Good Bye
+
+Process finished with exit code 0
