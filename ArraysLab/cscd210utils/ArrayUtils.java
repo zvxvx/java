@@ -111,7 +111,6 @@ public class ArrayUtils {
                 break;
             }
             copy[i] = myArray[i];
-
         }
         for (int i = targetIndex; i < copy.length; i++) {
             copy[i] = myArray[i + 1];
