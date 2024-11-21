@@ -105,17 +105,16 @@ public class ArrayUtils {
         if (!targetFound) {
             System.out.println("Value not found!");
             return myArray;
-        } else {
-            for (int i = 0; i < copy.length; i++) {
-                if (myArray[i] == target) {
-                    break;
-                } else {
-                    copy[i] = myArray[i];
-                }
+        }
+        for (int i = 0; i < copy.length; i++) {
+            if (i == targetIndex) {
+                break;
             }
-            for (int i = targetIndex; i < copy.length; i++) {
-                copy[i] = myArray[i + 1];
-            }
+            copy[i] = myArray[i];
+
+        }
+        for (int i = targetIndex; i < copy.length; i++) {
+            copy[i] = myArray[i + 1];
         }
         return copy;
     }// end method
