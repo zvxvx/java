@@ -1,6 +1,6 @@
 package computer;
 
-public class Computer {
+public class Computer implements Compute {
     //numbers based on gigabytes or cpu cores
     private int memory;
     private int storage;
@@ -43,12 +43,22 @@ public class Computer {
     }
 
     @Override
+    public int add(int num1, int num2) {
+        return num1 + num2;
+    }
+
+    @Override
+    public int subtract(int num1, int num2) {
+        return num1 - num2;
+    }
+
+    @Override
     public String toString() {
         return String.format("This computer has " + this.memory + " gigs of memory, " + this.storage + " gigs of storage, and " + this.cpu + " cpu cores.");
     }
 
-    @Override
-    public int hashCode() {
-        return;
-    }
+//    @Override
+//    public int hashCode() {
+//        return;
+//    }
 }
