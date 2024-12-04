@@ -21,7 +21,7 @@ public class Clock {
      *
      * @param hour   Takes in a valid hour value.
      * @param minute Takes in a valid minute value.
-     * @param second Takes in a valid secon value.
+     * @param second Takes in a valid second value.
      * @throws IllegalArgumentException is thrown when invalid hour, minutes, seconds are inputted.
      */
     public Clock(final int hour, final int minute, final int second) {
