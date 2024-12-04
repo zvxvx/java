@@ -20,7 +20,16 @@ public class Clock{
    }
 
   // EVC
-   public Clock(int hour,int minute,int second){
+   public Clock(final int hour,final int minute,final int second){
+       if ( hour < 0 || hour > 12 ) {
+           throw new IllegalArgumentException();
+       }
+       if ( minute < 0 || minute > 59 ) {
+           throw new IllegalArgumentException();
+       }
+       if ( second < 0 || second > 59 ) {
+           throw new IllegalArgumentException();
+       }
       this.hour = hour;
       this.minute = minute;
       this.second = second;
@@ -56,7 +65,10 @@ public class Clock{
     * This method adds additional hours to the clock.
     * @param hour gives us an hour to add to the current hour
     */
-   public void setHour(int hour){
+   public void setHour(final int hour){
+       if (hour < 0) {
+           throw new IllegalArgumentException();
+       }
       this.hour = (this.hour + hour) % 12;
       if (this.hour == 0) {
          this.hour = 12;
@@ -64,15 +76,19 @@ public class Clock{
    }
    
    
-   public void setMinutes(int minute){
-       this.hour = (this.hour + (this.minute + minute) / 60) % 12;
-       this.minute = ((this.minute + minute) % 60);
+   public void setMinutes(final int minute){
+       if (minute < 0) {
+           throw new IllegalArgumentException();
+       }
+       int addHourByMinutes = this.hour + ((this.minute + minute) / 60);
+       this.hour = addHourByMinutes % 12;
+       this.minute = (this.minute + minute) % 60;
    }
    
    @Override
    public String toString(){
-      String theString = "%02d:%02d:%02d";
-      return String.format(theString, this.hour,this.minute,this.second);
+      String timeString = "%02d:%02d:%02d";
+      return String.format(timeString, this.hour,this.minute,this.second);
    }
 
 
