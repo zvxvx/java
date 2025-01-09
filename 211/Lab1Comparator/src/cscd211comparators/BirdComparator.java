@@ -21,9 +21,12 @@ public class BirdComparator implements Comparator<Bird> {
      */
     @Override
     public int compare(Bird b1, Bird b2) {
-        //TODO: complete the method
-
-
+        if (b1.getWeight() < b2.getWeight()) {
+            return -1;
+        } else if (b1.getWeight() > b2.getWeight()) {
+            return 1;
+        }
+        return 0;
     }
 }
 

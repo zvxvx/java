@@ -8,6 +8,9 @@ package cscd211classes;
 public class Bird {
     //TODO: Add the fields for the Bird class
 
+    private final String name;
+    private final String species;
+    private final int weight;
 
     /**
      * Constructs a Bird object with the specified name, species, and weight.
@@ -17,8 +20,9 @@ public class Bird {
      * @param weight  The weight of the bird in grams.
      */
     public Bird(String name, String species, int weight) {
-        //TODO: complete the Bird constructor
-
+        this.name = name;
+        this.species = species;
+        this.weight = weight;
     }
 
     /**
@@ -27,8 +31,7 @@ public class Bird {
      * @return The name of the bird.
      */
     public String getName() {
-        //TODO: complete the getName() method
-
+        return this.name;
     }
 
     /**
@@ -37,8 +40,7 @@ public class Bird {
      * @return The species of the bird.
      */
     public String getSpecies() {
-        //TODO: complete the getSpecies() method
-
+        return this.species;
     }
 
     /**
@@ -47,8 +49,7 @@ public class Bird {
      * @return The weight of the bird in grams.
      */
     public int getWeight() {
-        //TODO: complete the getWeight method
-
+        return this.weight;
     }
 
     /**
@@ -58,7 +59,8 @@ public class Bird {
      */
     @Override
     public String toString() {
-        //TODO: complete the toString() method
+        return "Bird [Name=" + this.name +", Species=" + this.species + ", " +
+                "Weight=" + this.weight + "g]";
 
     }
 }

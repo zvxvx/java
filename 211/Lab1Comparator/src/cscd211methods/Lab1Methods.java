@@ -3,6 +3,8 @@ package cscd211methods;
 import cscd211classes.Bird;
 import cscd211comparators.BirdComparator;
 
+import java.util.Arrays;
+
 /**
  * This class contains various methods for manipulating and sorting Bird objects.
  */
@@ -10,7 +12,7 @@ public class Lab1Methods {
 
     /**
      * Sorts an array of birds by their weight using the selection sort algorithm.
-     * This method is given to you for free- do not edit this method.
+     * This method is given to you for free -- do not edit this method.
      *
      * @param birds The array of Bird objects to be sorted.
      */
@@ -36,7 +38,9 @@ public class Lab1Methods {
      */
     public void displayBirds(Bird[] birds) {
         //TODO: complete the displayBirds(Bird[] birds) method
-
+        for (Bird bird : birds)
+            System.out.println(bird);
+        }
     }
 
     /**
