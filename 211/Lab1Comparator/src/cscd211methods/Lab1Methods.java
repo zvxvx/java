@@ -3,8 +3,6 @@ package cscd211methods;
 import cscd211classes.Bird;
 import cscd211comparators.BirdComparator;
 
-import java.util.Arrays;
-
 /**
  * This class contains various methods for manipulating and sorting Bird objects.
  */
@@ -40,7 +38,6 @@ public class Lab1Methods {
         //TODO: complete the displayBirds(Bird[] birds) method
         for (Bird bird : birds)
             System.out.println(bird);
-        }
     }
 
     /**
@@ -51,7 +48,16 @@ public class Lab1Methods {
      */
     public Bird findHeaviestBird(Bird[] birds) {
         //TODO: Complete the findHeaviestBird(Bird[] birds) method
-
+        if (birds.length == 0) return null;
+        int heaviest = Integer.MIN_VALUE;
+        int heaviestIdx = 0;
+        for (int i = 0; i < birds.length; i++) {
+            if (birds[i].getWeight() > heaviest) {
+                heaviest = birds[i].getWeight();
+                heaviestIdx = i;
+            }
+        }
+        return birds[heaviestIdx];
     }
 
     /**
@@ -62,7 +68,16 @@ public class Lab1Methods {
      */
     public Bird findLightestBird(Bird[] birds) {
         //TODO: complete the findLightestBird(Bird[] birds) method
-
+        if (birds.length == 0) return null;
+        int lightest = Integer.MAX_VALUE;
+        int lightestIdx = 0;
+        for (int i = 0; i < birds.length; i++) {
+            if (birds[i].getWeight() < lightest) {
+                lightest = birds[i].getWeight();
+                lightestIdx = i;
+            }
+        }
+        return birds[lightestIdx];
     }
 
     /**
@@ -73,7 +88,10 @@ public class Lab1Methods {
      * @param maxWeight The maximum weight of the range (inclusive).
      */
     public void printBirdsInWeightRange(Bird[] birds, int minWeight, int maxWeight) {
-        //TODO: complete the method
-
+        for (Bird bird : birds) {
+            if (bird.getWeight() >= minWeight && bird.getWeight() <= maxWeight) {
+                System.out.println(bird);
+            }
+        }
     }
 }

@@ -1,8 +1,9 @@
 import cscd211classes.Bird;
 import cscd211methods.Lab1Methods;
-import org.junit.Before;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 
 /**
@@ -13,7 +14,7 @@ public class Lab1Tests {
     private Bird[] birds;
     private Lab1Methods labMethods;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         birds = new Bird[]{
                 new Bird("Parrot", "Macaw", 500),
@@ -50,6 +51,10 @@ public class Lab1Tests {
         assertEquals(30, lightest.getWeight());
     }
 
+    @Test
+    public void testPrintBirdsInWeightRange() {
+        labMethods.printBirdsInWeightRange(birds, 0, 500);
+    }
 
 }
 
