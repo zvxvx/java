@@ -54,6 +54,7 @@ public class Lab1Tests {
     @Test
     public void testPrintBirdsInWeightRange() {
         labMethods.printBirdsInWeightRange(birds, 0, 500);
+        System.out.println("Expects Parrot and Sparrow to be printed");
     }
 
 }
