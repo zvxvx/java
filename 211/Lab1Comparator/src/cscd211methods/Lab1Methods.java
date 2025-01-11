@@ -35,7 +35,6 @@ public class Lab1Methods {
      * @param birds The array of Bird objects to be displayed.
      */
     public void displayBirds(Bird[] birds) {
-        //TODO: complete the displayBirds(Bird[] birds) method
         for (Bird bird : birds)
             System.out.println(bird);
     }
@@ -47,7 +46,6 @@ public class Lab1Methods {
      * @return The Bird object with the maximum weight, or null if the array is empty.
      */
     public Bird findHeaviestBird(Bird[] birds) {
-        //TODO: Complete the findHeaviestBird(Bird[] birds) method
         if (birds.length == 0) return null;
         int heaviest = Integer.MIN_VALUE;
         int heaviestIdx = 0;
@@ -67,7 +65,6 @@ public class Lab1Methods {
      * @return The Bird object with the minimum weight, or null if the array is empty.
      */
     public Bird findLightestBird(Bird[] birds) {
-        //TODO: complete the findLightestBird(Bird[] birds) method
         if (birds.length == 0) return null;
         int lightest = Integer.MAX_VALUE;
         int lightestIdx = 0;

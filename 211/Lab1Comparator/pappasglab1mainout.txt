@@ -1,0 +1,19 @@
+/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=60693:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/zvx/dev/java/211/Lab1Comparator/out/production/Lab1_Comparator:/Users/zvx/.m2/repository/org/junit/jupiter/junit-jupiter/5.11.4/junit-jupiter-5.11.4.jar:/Users/zvx/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.11.4/junit-jupiter-api-5.11.4.jar:/Users/zvx/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/zvx/.m2/repository/org/junit/platform/junit-platform-commons/1.11.4/junit-platform-commons-1.11.4.jar:/Users/zvx/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/zvx/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.11.4/junit-jupiter-params-5.11.4.jar:/Users/zvx/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.11.4/junit-jupiter-engine-5.11.4.jar:/Users/zvx/.m2/repository/org/junit/platform/junit-platform-engine/1.11.4/junit-platform-engine-1.11.4.jar cscd211lab1.Main
+
+Unsorted Birds:
+Bird [Name=Parrot, Species=Macaw, Weight=500g]
+Bird [Name=Sparrow, Species=House Sparrow, Weight=30g]
+Bird [Name=Eagle, Species=Bald Eagle, Weight=7000g]
+
+Sorted Birds by Weight:
+Bird [Name=Sparrow, Species=House Sparrow, Weight=30g]
+Bird [Name=Parrot, Species=Macaw, Weight=500g]
+Bird [Name=Eagle, Species=Bald Eagle, Weight=7000g]
+
+Heaviest Bird: Bird [Name=Eagle, Species=Bald Eagle, Weight=7000g]
+Lightest Bird: Bird [Name=Sparrow, Species=House Sparrow, Weight=30g]
+
+Birds in weight range 100g to 6000g:
+Bird [Name=Parrot, Species=Macaw, Weight=500g]
+
+Process finished with exit code 0
