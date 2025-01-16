@@ -5,8 +5,8 @@ package cscd211classes;
  * Name and species are Strings.
  * Weight is an int.
  */
-public class Bird {
-    //TODO: Add the fields for the Bird class
+@SuppressWarnings("ClassCanBeRecord")
+public class Bird implements Comparable<Bird> {
 
     private final String name;
     private final String species;
@@ -55,12 +55,23 @@ public class Bird {
     /**
      * Prints a string describing the Bird object.
      * Sample output: Bird [Name=Parrot, Species=Macaw, Weight=500g]
+     *
      * @return a String containing each Bird attribute in the given format above.
      */
     @Override
     public String toString() {
-        return "Bird [Name=" + this.name +", Species=" + this.species + ", " +
+        return "Bird [Name=" + this.name + ", Species=" + this.species + ", " +
                 "Weight=" + this.weight + "g]";
 
+    }
+
+    @Override
+    public int compareTo(Bird bird) {
+        if (this.weight < bird.getWeight()) {
+            return -1;
+        } else if (this.weight > bird.getWeight()) {
+            return 1;
+        }
+        return 0;
     }
 }
