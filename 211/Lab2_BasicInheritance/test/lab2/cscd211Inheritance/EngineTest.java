@@ -2,7 +2,7 @@ package lab2.cscd211Inheritance;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class EngineTest {
 
@@ -23,7 +23,6 @@ class EngineTest {
         assertEquals("Honda", engine.getManufacturer());
 
     }
-
 
 
     @Test

@@ -11,14 +11,12 @@ public class ManufacturerComparator implements Comparator<Engine> {
 
 
     /**
-     *
      * @param e1 the first object to be compared.
      * @param e2 the second object to be compared.
      * @return the result of the comparison of manufacturers
      */
     @Override
     public int compare(Engine e1, Engine e2) {
-
-
+        return e1.getManufacturer().compareTo(e2.getManufacturer());
     }
 }
