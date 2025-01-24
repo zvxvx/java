@@ -80,7 +80,6 @@ public class Engine implements Comparable<Engine> {
      */
     @Override
     public int compareTo(final Engine e) {
-        //TODO: complete the method
         if (this.horsePower < e.horsePower) {
             return -1;
         } else if (this.horsePower > e.horsePower) {
@@ -97,7 +96,6 @@ public class Engine implements Comparable<Engine> {
      * @return a String representing the Engine info
      */
     public String toString() {
-        //TODO: complete the method
         return "Manufacturer: " + this.manufacturer + " with HP of " + this.horsePower;
     }
 
