@@ -7,10 +7,8 @@ public class ProgrammerTest {
 
 
     @Test
-    public void testProgrammerSalary() {
+    public void programmerSalary() {
         Programmer p = new Programmer("Randy Ellis", 40000, 20000, true);
         assertEquals(60000, p.getSalary(), 0.001);
     }
-
-
 }
