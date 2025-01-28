@@ -3,46 +3,46 @@ package lab3.cscd211inheritance;
 /**
  * The Lawyer class is a child of the Employee class.
  */
-public class Lawyer extends Employee{
-
-    //TODO: the Lawyer contains the field private int stockOptions
-
+public class Lawyer extends Employee {
+    private int stockOptions;
 
     /**
      * The constructor for the Lawyer class.
      * First the constructor for the parent class is called.
      * Then the additional field is added.
-     * @param name the Lawyer's name
-     * @param basePayrate the basePayrate for the Lawyer
+     *
+     * @param name              the Lawyer's name
+     * @param basePayrate       the basePayrate for the Lawyer
      * @param additionalPayrate additional pay amount for the Lawyer
-     * @param stockOptions the Lawyer's stock options
+     * @param stockOptions      the Lawyer's stock options
      */
     public Lawyer(final String name, final double basePayrate, final double additionalPayrate,
-      final int stockOptions            ){
-
-        //TODO: complete the constructor
-
-
-
+                  final int stockOptions) {
+        super(name, basePayrate, additionalPayrate);
+        this.stockOptions = stockOptions;
+        if (basePayrate < 0 || additionalPayrate < 0 || stockOptions < 0) {
+            throw new IllegalArgumentException();
+        }
     }
 
     /**
      * A method that gets the value of stockOptions
+     *
      * @return an int, the value of stockOptions
      */
-    public int getStockOptions(){
-
-        //TODO: complete the method
+    public int getStockOptions() {
+        return this.stockOptions;
     }
 
     /**
      * A method to create a string describing the Lawyer object.
      * Calls the toString() of the parent method.
+     *
      * @return a String in this format: Lawyer - FirstName LastName
      */
     @Override
-    public String toString(){
-        //TODO: complete the method
+    public String toString() {
+        return super.toString() + this.getName();
     }
 
 
@@ -51,10 +51,7 @@ public class Lawyer extends Employee{
      * Prints a string in this format: I am a lawyer. I get $180000.00 and I have 25 shares of stock.
      */
     @Override
-  public void report() {
-
-        //TODO: complete the method
-
-        
+    public void report() {
+        System.out.println("I am a " + this.getName() + ". I get " + this.getSalary() + " and I have " + this.stockOptions + " shares of stock.");
     }
 }

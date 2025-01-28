@@ -11,16 +11,20 @@ public class SalaryComparator implements Comparator<Employee> {
 
     /**
      * This method compares two Employee objects by Salary.
+     *
      * @param o1 the first object to be compared.
      * @param o2 the second object to be compared.
      * @return an int (0, -1, or 1) signifying the result of the comparison.
      */
     @Override
     public int compare(Employee o1, Employee o2) {
-        //TODO: complete the method
+        if (o1.getSalary() < o2.getSalary()) {
+            return -1;
+        } else if (o1.getSalary() > o2.getSalary()) {
+            return 1;
+        }
+        return 0;
     }
-
-
 
 
 }

@@ -11,14 +11,14 @@ public class NameComparator implements Comparator<Employee> {
 
     /**
      * This method compares Employees by their Name strings.
+     *
      * @param o1 the first object to be compared.
      * @param o2 the second object to be compared.
      * @return an int (-1, 1, or 0), signifying the result of the comparison.
      */
     @Override
     public int compare(Employee o1, Employee o2) {
-
-        //TODO: complete the method
+        return o1.getName().compareTo(o2.getName());
 
     }
 }
