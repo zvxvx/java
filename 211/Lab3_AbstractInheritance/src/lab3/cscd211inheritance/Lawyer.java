@@ -1,5 +1,7 @@
 package lab3.cscd211inheritance;
 
+import java.text.NumberFormat;
+
 /**
  * The Lawyer class is a child of the Employee class.
  */
@@ -38,11 +40,11 @@ public class Lawyer extends Employee {
      * A method to create a string describing the Lawyer object.
      * Calls the toString() of the parent method.
      *
-     * @return a String in this format: Lawyer - FirstName LastName
+     * @return a String in this format: Lawyer: FirstName LastName
      */
     @Override
     public String toString() {
-        return super.toString() + this.getName();
+        return "Lawyer: " + super.toString();
     }
 
 
@@ -52,6 +54,9 @@ public class Lawyer extends Employee {
      */
     @Override
     public void report() {
-        System.out.println("I am a " + this.getName() + ". I get " + this.getSalary() + " and I have " + this.stockOptions + " shares of stock.");
+        NumberFormat formatter = NumberFormat.getCurrencyInstance();
+        String moneyStr = formatter.format(this.getSalary());
+        System.out.println("I am a lawyer. I get " + moneyStr +
+                " and I have " + this.stockOptions + " shares of stock.");
     }
 }

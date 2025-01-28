@@ -79,7 +79,7 @@ public abstract class Employee implements Comparable<Employee> {
      */
     @Override
     public String toString() {
-        return this.name + ": ";
+        return this.name;
     }
 
     /**

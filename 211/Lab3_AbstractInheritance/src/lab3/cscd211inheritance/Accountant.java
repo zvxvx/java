@@ -1,5 +1,7 @@
 package lab3.cscd211inheritance;
 
+import java.text.NumberFormat;
+
 /**
  * The Accountant class is a child of the Employee class.
  */
@@ -38,11 +40,15 @@ public class Accountant extends Employee {
 
     /**
      * Produces a report for the Accountant and prints it to the screen.
-     * Format: I am an accountant. I make $100000.00 plus a parking stipend of $50.00.
+     * Format: I am an accountant. I make $100,000.00 plus a parking stipend
+     * of $50.00.
      */
     @Override
     public void report() {
-        System.out.println("I am an " + this.getName() + ". I make " + this.getSalary() + " plus a parking stipend of " + this.parkingStipend);
+        NumberFormat formatter = NumberFormat.getCurrencyInstance();
+        String moneyStr = formatter.format(this.getSalary());
+        System.out.println("I am an accountant. I make " + moneyStr + " plus " +
+                "a parking stipend of " + this.parkingStipend);
     }
 
     /**
@@ -53,6 +59,6 @@ public class Accountant extends Employee {
      */
     @Override
     public String toString() {
-        return super.toString() + this.getName();
+        return "Accountant: " + super.toString();
     }
 }

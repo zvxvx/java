@@ -1,5 +1,7 @@
 package lab3.cscd211inheritance;
 
+import java.text.NumberFormat;
+
 /**
  * The Programmer class is a child of the Employee class.
  */
@@ -42,23 +44,26 @@ public class Programmer extends Employee {
      */
     @Override
     public String toString() {
-        return super.toString() + this.getName();
+        return "Programmer: " + super.toString();
     }
 
 
     /**
      * Prints a String that describes the Programmer, in this format (depending on busPass value):
-     * I am a programmer. I get $60000.00 and I get a bus pass.
-     * I am a programmer. I get $65000.00 and I do not get a bus pass.
+     * I am a programmer. I get $60,000.00 and I get a bus pass.
+     * I am a programmer. I get $65,000.00 and I do not get a bus pass.
      */
     @Override
     public void report() {
+        NumberFormat formatter = NumberFormat.getCurrencyInstance();
+        String moneyStr = formatter.format(this.getSalary());
         String bus;
         if (this.busPass) {
             bus = "I get a bus pass.";
         } else {
-            bus = "I do not get a bus pass";
+            bus = "I do not get a bus pass.";
         }
-        System.out.println("I am a " + this.getName() + ". I get " + this.getSalary() + " and " + bus);
+        System.out.println("I am a programmer. I get " + moneyStr +
+                " and " + bus);
     }
 }
