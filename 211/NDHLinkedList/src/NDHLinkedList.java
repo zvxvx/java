@@ -9,22 +9,22 @@ public class NDHLinkedList implements NDHLinkedListInterface {
 
     @Override
     public void addFirst(int num) {
-
+        this.size++;
     }
 
     @Override
     public void addLast(int num) {
-
+        this.size++;
     }
 
     @Override
     public void removeFirst() throws IllegalStateException {
-
+        this.size--;
     }
 
     @Override
     public void removeLast() throws IllegalStateException {
-
+        this.size--;
     }
 
     @Override
@@ -44,21 +44,22 @@ public class NDHLinkedList implements NDHLinkedListInterface {
 
     @Override
     public void removeAtIndex(int i) throws IllegalArgumentException {
-
+        this.size--;
     }
 
     @Override
     public void addAtIndex(int i, int data) throws IllegalArgumentException {
-
+        this.size++;
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return this.size == 0;
     }
 
     @Override
-    public void printList() {
-
+    public void printList(NDHLinkedList ll) {
+        System.out.println(ll);
     }
+
 }
