@@ -8,6 +8,14 @@ public class NHDLinkedListTests {
     NDHLinkedList ll = new NDHLinkedList();
 
     @Test
+    void testAddFirst() {
+        ll.addFirst(1);
+        ll.addFirst(21);
+        assertEquals(21, ll.search(0), "Should return 21 as it was the last " +
+                "node to be added with the method addFirst");
+    }
+
+    @Test
     void testSearch() {
         ll.addFirst(1);
         ll.addFirst(21);
@@ -21,14 +29,6 @@ public class NHDLinkedListTests {
         System.out.println("Expected: Our list is: 21 -> 1 -> null");
         System.out.print("Actual: ");
         ll.printList();
-    }
-
-    @Test
-    void testAddFirst() {
-        ll.addFirst(1);
-        ll.addFirst(21);
-        assertEquals(21, ll.search(0), "Should return 21 as it was the last " +
-                "node to be added with the method addFirst");
     }
 
     @Test
