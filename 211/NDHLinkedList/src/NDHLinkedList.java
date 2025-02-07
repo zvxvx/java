@@ -65,8 +65,8 @@ public class NDHLinkedList implements NDHLinkedListInterface {
             throw new IllegalStateException();
         }
         Node current = this.head;
-        while (current != null) {
-            if (current.data == num) {
+        for (int i = 0; i < this.size; i++) {
+            if (i == num) {
                 return current.data;
             }
             current = current.next;
@@ -133,12 +133,13 @@ public class NDHLinkedList implements NDHLinkedListInterface {
     }
 
     @Override
-    public void printList(NDHLinkedList ll) {
-        System.out.println("Our list is: ");
+    public void printList() {
+        System.out.print("Our list is: ");
         Node current = this.head;
         while (current != null) {
-            System.out.println(current.data + "-> ");
+            System.out.print(current.data + " -> ");
             current = current.next;
         }
+        System.out.println("null");
     }
 }

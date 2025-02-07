@@ -78,8 +78,6 @@ public interface NDHLinkedListInterface {
 
     /**
      * Print the linked list.
-     *
-     * @param ll - A linked list we will use to print.
      */
-    void printList(NDHLinkedList ll);
+    void printList();
 }
