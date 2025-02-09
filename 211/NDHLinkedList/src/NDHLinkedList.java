@@ -9,23 +9,25 @@ public class NDHLinkedList implements NDHLinkedListInterface {
 
     @Override
     public void addFirst(int num) {
-        this.head = new Node(num, this.head);
+        if (size == 0) {
+            this.head = new Node(num, null);
+        } else {
+            this.head = new Node(num, this.head);
+        }
         this.size++;
     }
 
     @Override
     public void addLast(int num) {
-        Node last = new Node(num, null);
-        if (this.head == null) {
-            this.head = last;
-            this.size++;
-            return;
+        if (this.size == 0) {
+            this.head = new Node(num, null);
+        } else {
+            Node current = this.head;
+            while (current.next != null) {
+                current = current.next;
+            }
+            current.next = new Node(num, null);
         }
-        Node current = this.head;
-        while (current.next != null) {
-            current = current.next;
-        }
-        current.next = last;
         this.size++;
     }
 
@@ -43,9 +45,6 @@ public class NDHLinkedList implements NDHLinkedListInterface {
         if (this.size == 0) {
             throw new IllegalStateException();
         }
-        if (this.head.next == null) {
-            this.head = null;
-        }
         Node current = this.head;
         while (current.next.next != null) {
             current = current.next;
@@ -55,17 +54,12 @@ public class NDHLinkedList implements NDHLinkedListInterface {
     }
 
     @Override
-    public String toString() {
-        return "The linked list has " + this.size + " nodes in it.";
-    }
-
-    @Override
     public int search(int num) throws IllegalStateException {
-        if (this.size == 0) {
+        if (num < 0 || num >= this.size || this.size == 0) {
             throw new IllegalStateException();
         }
         Node current = this.head;
-        for (int i = 0; i < this.size; i++) {
+        for (int i = 0; i <= num; i++) {
             if (i == num) {
                 return current.data;
             }
@@ -75,56 +69,64 @@ public class NDHLinkedList implements NDHLinkedListInterface {
     }
 
     @Override
-    public Node getAtIndex(int i) throws IllegalArgumentException {
-        if (i < 0 || i >= this.size) {
-            throw new IllegalArgumentException();
+    public Node getAtIndex(int num) throws IllegalArgumentException {
+        if (num < 0 || num >= this.size || this.size == 0) {
+            throw new IllegalStateException();
         }
         Node current = this.head;
-        int index = 0;
-        while (current != null) {
-            if (i == index) {
+        for (int i = 0; i <= num; i++) {
+            if (i == num) {
                 return current;
             }
             current = current.next;
-            index++;
         }
         return null;
+
     }
 
     @Override
-    public void removeAtIndex(int i) throws IllegalArgumentException {
-        if (i < 0 || i >= this.size) {
-            throw new IllegalArgumentException();
+    public void removeAtIndex(int num) throws IllegalArgumentException {
+        if (num < 0 || num >= this.size || this.size == 0) {
+            throw new IllegalStateException();
         }
-
-        if (i == 0) {
+        if (num == 0) {
             this.head = this.head.next;
         } else {
             Node current = this.head;
-            for (int idx = 0; idx < i - 1; idx++) {
+            for (int i = 0; i <= num; i++) {
+                if (i == num - 1) {
+                    current.next = current.next.next;
+                    break;
+                }
                 current = current.next;
             }
-            current.next = current.next.next;
-            this.size--;
         }
+        this.size--;
     }
 
     @Override
-    public void addAtIndex(int i, int data) throws IllegalArgumentException {
-        if (this.size == 0 || i > this.size) {
-            throw new IllegalArgumentException();
+    public void addAtIndex(int num, int data) throws IllegalArgumentException {
+        if (num < 0 || num >= this.size || this.size == 0) {
+            throw new IllegalStateException();
         }
-
-        if (i == 0) {
+        if (num == 0) {
             this.head = new Node(data, this.head);
         } else {
             Node current = this.head;
-            for (int idx = 0; idx < i - 1; idx++) {
+            for (int i = 0; i <= num; i++) {
+                if (i == num - 1) {
+                    current.next = new Node(data, current.next);
+                    break;
+                }
                 current = current.next;
             }
-            current.next = new Node(data, current.next);
-            this.size++;
         }
+        this.size++;
+    }
+
+    @Override
+    public String toString() {
+        return "The linked list is " + this.size + " nodes long.";
     }
 
     @Override
@@ -134,12 +136,12 @@ public class NDHLinkedList implements NDHLinkedListInterface {
 
     @Override
     public void printList() {
-        System.out.print("Our list is: ");
         Node current = this.head;
         while (current != null) {
             System.out.print(current.data + " -> ");
             current = current.next;
         }
-        System.out.println("null");
+        System.out.print("null.\n");
+        System.out.println("The total length of the linked list is: " + this.size);
     }
 }

@@ -44,13 +44,13 @@ public interface NDHLinkedListInterface {
     int search(int num) throws IllegalStateException;
 
     /**
-     * Get a node at a certain index.
+     * Get a node's data at a certain index.
      *
      * @param i - the index we want to search with.
-     * @return the node we want.
+     * @return the node data we want.
      * @throws IllegalArgumentException - if index is oob or list is empty.
      */
-    Node getAtIndex(int i) throws IllegalArgumentException;
+    Node getAtIndex(int num) throws IllegalArgumentException;
 
     /**
      * Remove a node at a certain index.
@@ -58,7 +58,7 @@ public interface NDHLinkedListInterface {
      * @param i - the index we want to search with.
      * @throws IllegalArgumentException - if index is oob or list is empty.
      */
-    void removeAtIndex(int i) throws IllegalArgumentException;
+    void removeAtIndex(int num) throws IllegalArgumentException;
 
     /**
      * Add a node at a certain index.
@@ -67,7 +67,7 @@ public interface NDHLinkedListInterface {
      * @param data - the data we want to use for the node.
      * @throws IllegalArgumentException - if index is oob.
      */
-    void addAtIndex(int i, int data) throws IllegalArgumentException;
+    void addAtIndex(int num, int data) throws IllegalArgumentException;
 
     /**
      * Lets us know if a list is empty or not.

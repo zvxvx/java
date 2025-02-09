@@ -10,25 +10,12 @@ public class NHDLinkedListTests {
     @Test
     void testAddFirst() {
         ll.addFirst(1);
-        ll.addFirst(21);
-        assertEquals(21, ll.search(0), "Should return 21 as it was the last " +
-                "node to be added with the method addFirst");
-    }
-
-    @Test
-    void testSearch() {
-        ll.addFirst(1);
-        ll.addFirst(21);
-        assertEquals(1, ll.search(1), "Should return 1.");
-    }
-
-    @Test
-    void testPrintList() {
-        ll.addFirst(1);
-        ll.addFirst(21);
-        System.out.println("Expected: Our list is: 21 -> 1 -> null");
+        ll.addFirst(2);
+        System.out.println("Expect: 2 -> 1 -> null.");
         System.out.print("Actual: ");
         ll.printList();
+        assertEquals(2, ll.search(0), "Should return 21 as it was the last " +
+                "node to be added with the method addFirst");
     }
 
     @Test
@@ -36,8 +23,28 @@ public class NHDLinkedListTests {
         ll.addFirst(21);
         ll.addLast(1);
         ll.addFirst(13);
+        System.out.println("Expect: 13 -> 21 -> 1 -> null.");
+        System.out.print("Actual: ");
+        ll.printList();
         assertEquals(1, ll.search(2), "Should return 1 as addLast has data 1");
     }
+
+    @Test
+    void testSearch() {
+        ll.addFirst(4);
+        ll.addFirst(21);
+        assertEquals(4, ll.search(1), "Should return 1.");
+    }
+
+    @Test
+    void testPrintList() {
+        ll.addFirst(1);
+        ll.addFirst(21);
+        System.out.println("Expect: 21 -> 1 -> null");
+        System.out.print("Actual: ");
+        ll.printList();
+    }
+
 
     @Test
     void testRemoveFirst() {
@@ -45,6 +52,9 @@ public class NHDLinkedListTests {
         ll.addLast(1);
         ll.addFirst(13);
         ll.removeFirst();
+        System.out.println("Expect: 21 -> 1 -> null");
+        System.out.print("Actual: ");
+        ll.printList();
         assertEquals(21, ll.search(0), "Should return 21, as 13 was removed.");
     }
 
@@ -55,6 +65,9 @@ public class NHDLinkedListTests {
         ll.addLast(45);
         ll.addFirst(13);
         ll.removeLast();
+        System.out.println("Expect: 13 -> 21 -> 1 -> null");
+        System.out.print("Actual: ");
+        ll.printList();
         assertEquals(1, ll.search(2), "Should return 1, as 45 was removed.");
     }
 
@@ -65,7 +78,7 @@ public class NHDLinkedListTests {
         ll.addLast(45);
         ll.addFirst(13);
         ll.removeLast();
-        assertEquals("The linked list has 3 nodes in it.", ll.toString());
+        assertEquals("The linked list is 3 nodes long.", ll.toString());
     }
 
     @Test
@@ -76,8 +89,8 @@ public class NHDLinkedListTests {
         System.out.println("Index 0: " + ll.getAtIndex(0));
         System.out.println("Index 1: " + ll.getAtIndex(1));
         System.out.println("Index 2: " + ll.getAtIndex(2));
-        System.out.println("Expected: Node data for index 1 is 13:\n"
-                + ll.getAtIndex(1) + " equals data " + ll.search(1));
+        System.out.println("Expected: Node to match Node Index 1: "
+                + ll.getAtIndex(1));
     }
 
     @Test
