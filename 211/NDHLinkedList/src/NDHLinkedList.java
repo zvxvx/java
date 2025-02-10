@@ -44,24 +44,27 @@ public class NDHLinkedList implements NDHLinkedListInterface {
     public void removeLast() throws IllegalStateException {
         if (this.size == 0) {
             throw new IllegalStateException();
+        } else if (this.size == 1) {
+            this.head = null;
+        } else {
+            Node current = this.head;
+            while (current.next.next != null) {
+                current = current.next;
+            }
+            current.next = null;
         }
-        Node current = this.head;
-        while (current.next.next != null) {
-            current = current.next;
-        }
-        current.next = null;
         this.size--;
     }
 
     @Override
-    public int search(int num) throws IllegalStateException {
-        if (num < 0 || num >= this.size || this.size == 0) {
+    public int search(int data) throws IllegalStateException {
+        if (this.size == 0) {
             throw new IllegalStateException();
         }
         Node current = this.head;
-        for (int i = 0; i <= num; i++) {
-            if (i == num) {
-                return current.data;
+        for (int i = 0; i <= this.size; i++) {
+            if (current.data == data) {
+                return i;
             }
             current = current.next;
         }
@@ -69,13 +72,13 @@ public class NDHLinkedList implements NDHLinkedListInterface {
     }
 
     @Override
-    public Node getAtIndex(int num) throws IllegalArgumentException {
-        if (num < 0 || num >= this.size || this.size == 0) {
-            throw new IllegalStateException();
+    public Node getAtIndex(int index) throws IllegalArgumentException {
+        if (index < 0 || index >= this.size || this.size == 0) {
+            throw new IllegalArgumentException();
         }
         Node current = this.head;
-        for (int i = 0; i <= num; i++) {
-            if (i == num) {
+        for (int i = 0; i <= index; i++) {
+            if (i == index) {
                 return current;
             }
             current = current.next;
@@ -85,16 +88,16 @@ public class NDHLinkedList implements NDHLinkedListInterface {
     }
 
     @Override
-    public void removeAtIndex(int num) throws IllegalArgumentException {
-        if (num < 0 || num >= this.size || this.size == 0) {
-            throw new IllegalStateException();
+    public void removeAtIndex(int index) throws IllegalArgumentException {
+        if (index < 0 || index >= this.size || this.size == 0) {
+            throw new IllegalArgumentException();
         }
-        if (num == 0) {
+        if (index == 0) {
             this.head = this.head.next;
         } else {
             Node current = this.head;
-            for (int i = 0; i <= num; i++) {
-                if (i == num - 1) {
+            for (int i = 0; i <= index; i++) {
+                if (i == index - 1) {
                     current.next = current.next.next;
                     break;
                 }
@@ -105,16 +108,17 @@ public class NDHLinkedList implements NDHLinkedListInterface {
     }
 
     @Override
-    public void addAtIndex(int num, int data) throws IllegalArgumentException {
-        if (num < 0 || num >= this.size || this.size == 0) {
-            throw new IllegalStateException();
+    public void addAtIndex(int index, int data) throws IllegalArgumentException {
+        if (index < 0 || index > this.size) { // index > this.size makes main
+            // work; however, technically it should be index >= this.size
+            throw new IllegalArgumentException();
         }
-        if (num == 0) {
+        if (index == 0) {
             this.head = new Node(data, this.head);
         } else {
             Node current = this.head;
-            for (int i = 0; i <= num; i++) {
-                if (i == num - 1) {
+            for (int i = 0; i <= index; i++) {
+                if (i == index - 1) {
                     current.next = new Node(data, current.next);
                     break;
                 }
