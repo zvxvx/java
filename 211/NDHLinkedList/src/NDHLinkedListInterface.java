@@ -75,9 +75,4 @@ public interface NDHLinkedListInterface {
      * @return - a true or false value
      */
     boolean isEmpty();
-
-    /**
-     * Print the linked list.
-     */
-    void printList();
 }

@@ -109,8 +109,7 @@ public class NDHLinkedList implements NDHLinkedListInterface {
 
     @Override
     public void addAtIndex(int index, int data) throws IllegalArgumentException {
-        if (index < 0 || index > this.size) { // index > this.size makes main
-            // work; however, technically it should be index >= this.size
+        if (index < 0 || index > this.size) {
             throw new IllegalArgumentException();
         }
         if (index == 0) {
@@ -130,7 +129,10 @@ public class NDHLinkedList implements NDHLinkedListInterface {
 
     @Override
     public String toString() {
-        return "The linked list is " + this.size + " nodes long.";
+        if (this.size == 0) {
+            return "Empty List";
+        }
+        return printString();
     }
 
     @Override
@@ -138,14 +140,14 @@ public class NDHLinkedList implements NDHLinkedListInterface {
         return this.size == 0;
     }
 
-    @Override
-    public void printList() {
+    private String printString() {
+        StringBuilder str = new StringBuilder();
         Node current = this.head;
         while (current != null) {
-            System.out.print(current.data + " -> ");
+            str.append(current.data).append(" -> ");
             current = current.next;
         }
-        System.out.print("null.\n");
-        System.out.println("The total length of the linked list is: " + this.size);
+        str.append("null");
+        return "[" + str + "]\nSize of list is " + this.size;
     }
 }
