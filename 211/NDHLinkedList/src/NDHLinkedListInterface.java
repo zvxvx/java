@@ -44,10 +44,10 @@ public interface NDHLinkedListInterface {
     int search(int num) throws IllegalStateException;
 
     /**
-     * Get a node's data at a certain index.
+     * Get a node's index based on its data.
      *
-     * @param i - the index we want to search with.
-     * @return the node data we want.
+     * @param num - the data we want to search for.
+     * @return - the index of the node with the data we're searching for.
      * @throws IllegalArgumentException - if index is oob or list is empty.
      */
     Node getAtIndex(int num) throws IllegalArgumentException;
