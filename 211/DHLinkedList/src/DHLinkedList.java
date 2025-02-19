@@ -34,7 +34,15 @@ public class DHLinkedList implements DHLinkedListInterface {
 
     @Override
     public String toString(){
-        return "";
+        StringBuilder str = new StringBuilder();
+        str.append("[");
+        Node current = this.head.next;
+        while (current != null) {
+            str.append(current.data);
+            str.append(" -> ");
+            current = current.next;
+        }
+        return str + "null]";
     }
 
     @Override
