@@ -9,7 +9,12 @@ public class DHLinkedList implements DHLinkedListInterface {
 
     @Override
     public void addFirst(String data) {
-
+        if (this.size == 0) {
+            this.head.next = new Node(data, null);
+        } else {
+            this.head.next = new Node(data, this.head.next);
+        }
+        this.size++;
     }
 
     @Override
@@ -25,6 +30,11 @@ public class DHLinkedList implements DHLinkedListInterface {
     @Override
     public void removeLast() throws IllegalStateException {
 
+    }
+
+    @Override
+    public String toString(){
+        return "";
     }
 
     @Override
