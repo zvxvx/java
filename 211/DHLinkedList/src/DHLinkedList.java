@@ -4,7 +4,7 @@ public class DHLinkedList implements DHLinkedListInterface {
 
     public DHLinkedList(){
         this.size = 0;
-        this.head = null;
+        this.head = new Node(null, null);
     }
 
     @Override
