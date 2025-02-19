@@ -2,7 +2,7 @@ public class DHLinkedList implements DHLinkedListInterface {
     int size;
     Node head;
 
-    public DHLinkedList(){
+    public DHLinkedList() {
         this.size = 0;
         this.head = new Node(null, null);
     }
@@ -19,21 +19,45 @@ public class DHLinkedList implements DHLinkedListInterface {
 
     @Override
     public void addLast(String data) {
-
+        if (this.size == 0) {
+            this.head.next = new Node(data, this.head.next);
+        } else {
+            Node current = this.head.next;
+            while (current.next != null) {
+                current = current.next;
+            }
+            current.next = new Node(data, null);
+        }
+        this.size++;
     }
 
     @Override
     public void removeFirst() throws IllegalStateException {
-
+        if (this.size == 0) {
+            throw new IllegalStateException();
+        }
+        this.head.next = this.head.next.next;
+        this.size--;
     }
 
     @Override
     public void removeLast() throws IllegalStateException {
-
+        if (this.size == 0) {
+            throw new IllegalStateException();
+        }
+        if (this.size == 1) {
+            this.head.next = null;
+        }
+        Node current = this.head.next;
+        while (current.next.next != null) {
+            current = current.next;
+        }
+        current.next = null;
+        this.size--;
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         StringBuilder str = new StringBuilder();
         str.append("[");
         Node current = this.head.next;
@@ -42,7 +66,7 @@ public class DHLinkedList implements DHLinkedListInterface {
             str.append(" -> ");
             current = current.next;
         }
-        return str + "null]";
+        return str + "null]  size: " + this.size;
     }
 
     @Override
