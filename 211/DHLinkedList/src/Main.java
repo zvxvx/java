@@ -9,9 +9,7 @@ public class Main {
         System.out.println(ll);
         ll.removeFirst();
         System.out.println(ll);
-        ll.removeLast();
-        System.out.println(ll);
-        ll.removeLast();
-        System.out.println(ll);
+        System.out.println(ll.search("last"));
+        System.out.println(ll.getAtIndex(0));
     }
 }

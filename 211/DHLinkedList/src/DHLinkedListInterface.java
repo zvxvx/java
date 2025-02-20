@@ -31,10 +31,10 @@ public interface DHLinkedListInterface {
 
     /**
      * Search for the data contained in the node and return the index of that
-     * node.
+     * node. The dummy head is not included in the indexing.
      * @param data - The data we want to find.
      * @return - The index of the node that contains said data.
-     * @throws IllegalStateException - if the index is oob.
+     * @throws IllegalStateException - if list is empty.
      */
     int search(String data) throws IllegalStateException;
 

@@ -72,11 +72,31 @@ public class DHLinkedList implements DHLinkedListInterface {
 
     @Override
     public int search(String data) throws IllegalStateException {
-        return 0;
+        if (this.size == 0) {
+            throw new IllegalStateException();
+        }
+        Node current = this.head.next;
+        for (int i = 0; i < this.size; i++) {
+            if (current.data.equals(data)) {
+                return i;
+            }
+            current = current.next;
+        }
+        return -1;
     }
 
     @Override
     public Node getAtIndex(int index) throws IllegalArgumentException {
+        if (size == 0 || index >= this.size || index < 0) {
+            throw new IllegalArgumentException();
+        }
+        Node current = this.head.next;
+        for (int i = 0; i < this.size; i++) {
+            if (i == index) {
+                return current;
+            }
+            current = current.next;
+        }
         return null;
     }
 
