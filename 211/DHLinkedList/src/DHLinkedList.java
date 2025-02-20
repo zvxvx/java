@@ -102,7 +102,22 @@ public class DHLinkedList implements DHLinkedListInterface {
 
     @Override
     public void removeAtIndex(int index) throws IllegalArgumentException {
-
+        if (size == 0 || index >= this.size || index < 0) {
+            throw new IllegalArgumentException();
+        }
+        if (index == 0) {
+            this.head.next = this.head.next.next;
+        } else {
+            Node current = this.head.next;
+            for (int i = 0; i < this.size; i++) {
+                if (i == index - 1) {
+                    current.next = current.next.next;
+                    break;
+                }
+                current = current.next;
+            }
+        }
+        this.size--;
     }
 
     @Override
