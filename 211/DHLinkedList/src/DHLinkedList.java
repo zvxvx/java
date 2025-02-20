@@ -36,8 +36,8 @@ public class DHLinkedList implements DHLinkedListInterface {
         if (this.size == 0) {
             throw new IllegalStateException();
         }
-        this.head.next = this.head.next.next;
-        this.size--;
+            this.head.next = this.head.next.next;
+            this.size--;
     }
 
     @Override
@@ -47,12 +47,13 @@ public class DHLinkedList implements DHLinkedListInterface {
         }
         if (this.size == 1) {
             this.head.next = null;
+        } else {
+            Node current = this.head.next;
+            while (current.next.next != null) {
+                current = current.next;
+            }
+            current.next = null;
         }
-        Node current = this.head.next;
-        while (current.next.next != null) {
-            current = current.next;
-        }
-        current.next = null;
         this.size--;
     }
 
@@ -66,7 +67,7 @@ public class DHLinkedList implements DHLinkedListInterface {
             str.append(" -> ");
             current = current.next;
         }
-        return str + "null]  size: " + this.size;
+        return str + "null] size: " + this.size;
     }
 
     @Override
