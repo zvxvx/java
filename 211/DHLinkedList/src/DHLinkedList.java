@@ -36,8 +36,8 @@ public class DHLinkedList implements DHLinkedListInterface {
         if (this.size == 0) {
             throw new IllegalStateException();
         }
-            this.head.next = this.head.next.next;
-            this.size--;
+        this.head.next = this.head.next.next;
+        this.size--;
     }
 
     @Override
@@ -121,8 +121,23 @@ public class DHLinkedList implements DHLinkedListInterface {
     }
 
     @Override
-    public void addAtIndex(int index) throws IllegalArgumentException {
-
+    public void addAtIndex(int index, String data) throws IllegalArgumentException {
+        if (index > this.size || index < 0) {
+            throw new IllegalArgumentException();
+        }
+        if (index == 0) {
+            this.head.next = new Node(data, this.head.next);
+        } else {
+            Node current = this.head.next;
+            for (int i = 0; i < this.size; i++) {
+                if (i == index - 1) {
+                    current.next = new Node(data, current.next);
+                    break;
+                }
+                current = current.next;
+            }
+        }
+        this.size++;
     }
 
     @Override
