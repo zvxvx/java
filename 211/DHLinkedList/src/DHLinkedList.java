@@ -76,7 +76,7 @@ public class DHLinkedList implements DHLinkedListInterface {
             throw new IllegalStateException();
         }
         Node current = this.head.next;
-        for (int i = 0; i < this.size; i++) {
+        for (int i = 1; i <= this.size; i++) {
             if (current.data.equals(data)) {
                 return i;
             }
@@ -87,11 +87,11 @@ public class DHLinkedList implements DHLinkedListInterface {
 
     @Override
     public Node getAtIndex(int index) throws IllegalArgumentException {
-        if (size == 0 || index >= this.size || index < 0) {
+        if (size == 0 || index > this.size || index < 0) {
             throw new IllegalArgumentException();
         }
         Node current = this.head.next;
-        for (int i = 0; i < this.size; i++) {
+        for (int i = 1; i <= this.size; i++) {
             if (i == index) {
                 return current;
             }
@@ -102,14 +102,14 @@ public class DHLinkedList implements DHLinkedListInterface {
 
     @Override
     public void removeAtIndex(int index) throws IllegalArgumentException {
-        if (size == 0 || index >= this.size || index < 0) {
+        if (size == 0 || index > this.size || index < 0) {
             throw new IllegalArgumentException();
         }
-        if (index == 0) {
+        if (index == 1) {
             this.head.next = this.head.next.next;
         } else {
             Node current = this.head.next;
-            for (int i = 0; i < this.size; i++) {
+            for (int i = 1; i <= this.size; i++) {
                 if (i == index - 1) {
                     current.next = current.next.next;
                     break;
@@ -122,14 +122,14 @@ public class DHLinkedList implements DHLinkedListInterface {
 
     @Override
     public void addAtIndex(int index, String data) throws IllegalArgumentException {
-        if (index > this.size || index < 0) {
+        if (index > this.size + 1 || index < 0) {
             throw new IllegalArgumentException();
         }
-        if (index == 0) {
+        if (index == 1) {
             this.head.next = new Node(data, this.head.next);
         } else {
             Node current = this.head.next;
-            for (int i = 0; i < this.size; i++) {
+            for (int i = 1; i <= this.size; i++) {
                 if (i == index - 1) {
                     current.next = new Node(data, current.next);
                     break;
