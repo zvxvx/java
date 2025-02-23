@@ -46,5 +46,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="junit.jupiter" level="project" />
+    <orderEntry type="library" name="apache.commons.text" level="project" />
   </component>
 </module>

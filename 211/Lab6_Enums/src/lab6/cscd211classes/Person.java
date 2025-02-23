@@ -1,16 +1,16 @@
 package lab6.cscd211classes;
 
+import lab6.cscd211comparators.ColorComparator;
 import lab6.cscd211enums.Color;
-
+import org.apache.commons.text.WordUtils;
 /**
  * This class describes the Person objects used in this lab
  */
 public class Person implements Comparable<Person>{
 
-    private String fn;
-
-    private String ln;
-    private Color color;
+    private final String fn;
+    private final String ln;
+    private final Color color;
 
     /**
      * The constructor for the Person object.
@@ -19,11 +19,9 @@ public class Person implements Comparable<Person>{
      * @param color an enum, signifying the Person's favorite color.
      */
     public Person(String fn, String ln, Color color){
-
-        //TODO: complete the constructor
-
-
-
+        this.fn = fn;
+        this.ln = ln;
+        this.color = color;
     }
 
     /**
@@ -31,8 +29,7 @@ public class Person implements Comparable<Person>{
      * @return an enum, being the Person's favorite color
      */
     public Color getColor(){
-        //TODO: complete the method
-
+        return this.color;
     }
 
     /**
@@ -40,8 +37,7 @@ public class Person implements Comparable<Person>{
      * @return a String, being the Person's first name
      */
     public String getFn(){
-
-        //TODO: complete the method
+        return this.fn;
     }
 
     /**
@@ -49,8 +45,7 @@ public class Person implements Comparable<Person>{
      * @return a String, being the Person's last name
      */
     public String getLn(){
-
-        //TODO: complete the method
+        return this.ln;
     }
 
 
@@ -63,8 +58,15 @@ public class Person implements Comparable<Person>{
      */
     @Override
     public int compareTo(Person o) {
-
-        //TODO: complete the method
+        if (this.getLn().compareTo(o.getLn()) == 0) {
+            if (this.getFn().compareTo(o.getFn()) == 0) {
+                return new ColorComparator().compare(this, o);
+            } else {
+                return this.getFn().compareTo(o.getFn());
+            }
+        } else {
+            return this.getLn().compareTo(o.getLn());
+        }
     }
 
     /**
@@ -75,8 +77,6 @@ public class Person implements Comparable<Person>{
      * Bubba Von Bigbelly, PURPLE
      */
     public String toString(){
-
-        //TODO: complete the method
+        return WordUtils.capitalizeFully(this.fn) + " " + WordUtils.capitalizeFully(this.ln) + ", " + this.color;
     }
-
 }

@@ -16,7 +16,7 @@ public class ColorComparator implements Comparator<Person> {
      */
     @Override
     public int compare(Person p1, Person p2) {
-        //TODO: complete the method
+        return p1.getColor().compareTo(p2.getColor());
     }
 
 }
