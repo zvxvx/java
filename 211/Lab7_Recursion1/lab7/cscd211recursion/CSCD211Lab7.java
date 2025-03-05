@@ -2,8 +2,9 @@ package lab7.cscd211recursion;
 
 public class CSCD211Lab7 {
     public static void main(String[] args) {
-        for (int x = 0; x < 8; x++)
-            System.out.printf("Square - Row: %d - Blocks: %d\n", x, square(x));
+        for (int i = 0; i < 8; i++) {
+            System.out.printf("Square - Row: %d - Blocks: %d\n", i, square(i));
+        }
     }
 
     /**
@@ -24,9 +25,11 @@ public class CSCD211Lab7 {
      */
     public static int square(final int row) {
         // base case
+        if (row == 0)
+            return row;
         //recursive call square(updated params)
+        return row + square(row - 1);
         // return total number of blocks
-        return -1;
     }
 
 }
